@@ -6,6 +6,7 @@ const login = async (req, res, next) => {
   try {
     const email = req.body.email;
     const password = req.body.password;
+    console.log("test");
 
     const useremail = await register.findOne({ email: email });
 
