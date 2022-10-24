@@ -22,6 +22,6 @@ category : {
     mainCategory: "Electronics",
     subCategories: ["Mobile", "Internet", "Small"]
   }
-const findProductByCategory = await Post.find({category: {mainCategory: req.query.mainCategory, subCategory: {$in : req.query.subCategory}}})
+
 
 */
