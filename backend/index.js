@@ -3,6 +3,7 @@ require("./db");
 const express= require("express");
 const { postRouter } = require("./routes/posts")
 const { authRouter } = require("./routes/auth")
+const postRoutes = require("./routes/posts")
 
 const app = express();
 
