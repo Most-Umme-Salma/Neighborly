@@ -1,0 +1,72 @@
+/* primaryButton in Blue */
+
+.primaryButton {
+	box-shadow: 0px 0px 0px 2px #9fb4f2;
+	background:linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
+	background-color:#7892c2;
+	border-radius:10px;
+	border:1px solid #4e6096;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:19px;
+	padding:12px 37px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #283966;
+}
+.primaryButton:hover {
+	background:linear-gradient(to bottom, #476e9e 5%, #7892c2 100%);
+	background-color:#476e9e;
+}
+.primaryButton:active {
+	position:relative;
+	top:1px;
+}
+
+/* secondary button in green */
+
+.secondaryButton {
+	box-shadow: 0px 0px 0px 2px #3dc21b;
+	background:linear-gradient(to bottom, #44c767 5%, #5cbf2a 100%);
+	background-color:#44c767;
+	border-radius:10px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:19px;
+	padding:12px 37px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+}
+.secondaryButton:hover {
+	background:linear-gradient(to bottom, #5cbf2a 5%, #44c767 100%);
+	background-color:#5cbf2a;
+}
+.secondaryButton:active {
+	position:relative;
+	top:1px;
+}
+
+/* tertiary button transparent in pink */
+
+.tertiaryButton {
+	box-shadow: 0px 0px 0px 2px #f09ef0;
+	background-color:transparent;
+	border-radius:10px;
+	border:1px solid #944d8f;
+	display:inline-block;
+	cursor:pointer;
+	color:#ff00ff;
+	font-size:19px;
+	padding:12px 37px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #66295f;
+}
+.tertiaryButton:hover {
+	background-color:transparent;
+}
+.tertiaryButton:active {
+	position:relative;
+	top:1px;
+}

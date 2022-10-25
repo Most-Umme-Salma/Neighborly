@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+
 
 module.exports = () =>
   mongoose
@@ -7,3 +7,7 @@ module.exports = () =>
     .catch((err) => {
       console.log(err);
     });
+
+const mongoose = require("mongoose")
+mongoose.connect(process.env.CONNECTION_STRING).catch((err)=>{console.log(err)});
+

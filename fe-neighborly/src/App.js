@@ -5,9 +5,20 @@ import Newoffer from './components/new-offer/Newoffer';
 import Offer from './components/offers/Offers';
 import Promotions from './components/promotions/Promotions';
 import Searchbar from './components/searchbar/Searchbar';
+import Login from './components/login/Login';
 import {Route, Routes} from "react-router-dom"
+import {useEffect, useState} from "react";
+import axios from "axios";
 
-function App() {
+function App(){
+  const [posts, setPosts] = useState();
+  useEffect(()=>{
+    axios
+      .get("http://localhost:3001")
+      .then((res)=>{setPosts(res.data)})
+      .catch((err)=>{console.log(err)})
+  },[])
+  
   return (
     <div >
       <Navbar/>
@@ -18,11 +29,12 @@ function App() {
           <Route path='/newoffer' element={<Newoffer/>}/>
           <Route path='/promotions' element={<Promotions/>}/>
           <Route path='/searchbar' element={<Searchbar/>}/>
+          <Route path='/login' element={<Login />}/>
 
         </Routes>
       </div>
     </div>
   );
-}
+};
 
 export default App;
