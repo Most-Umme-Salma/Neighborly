@@ -2,12 +2,26 @@ const { Post } = require("../models/posts");
 
 const createPost = async (req, res, next) => {
   try {
-    const post = Post.create(body);
-    res.json(post);
+    const {
+        body: {title, description, price, img, category}
+    } = req;
+
+    //save new post in db
+    const newPost = await Post.create({
+        title,
+        description,
+        price,
+        img,
+        category,
+      });
+
+    res.json(newPost);
   } catch (error) {
     res.json({ message: error.message });
   }
 };
+
+
 
 const getPost = async (req, res, next) => {
   try {
