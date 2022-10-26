@@ -1,3 +1,6 @@
+
+import Footer from "./components/footer/Footer";
+
 import './App.css';
 import Navbar from './components/navbar/Navbar';
 import Home from './components/home/Home';
@@ -10,6 +13,7 @@ import {Route, Routes} from "react-router-dom"
 import {useEffect, useState} from "react";
 import axios from "axios";
 
+
 function App(){
   const [posts, setPosts] = useState();
   useEffect(()=>{
@@ -20,19 +24,22 @@ function App(){
   },[])
   
   return (
-    <div >
-      <Navbar/>
-      <div>
-        <Routes>
-          <Route path='/' element={<Home/>}/>
-          <Route path='/offer' element={<Offer/>}/>
-          <Route path='/newoffer' element={<Newoffer/>}/>
-          <Route path='/promotions' element={<Promotions/>}/>
-          <Route path='/searchbar' element={<Searchbar/>}/>
-          <Route path='/login' element={<Login />}/>
+    <div className="page-container">
+      <div className="content-wrap">
+        <Navbar />
+        <div>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/offer" element={<Offer />} />
+            <Route path="/newoffer" element={<Newoffer />} />
+            <Route path="/promotions" element={<Promotions />} />
+            <Route path="/searchbar" element={<Searchbar />} />
+            <Route path='/login' element={<Login />}/>
+          </Routes>
+        </div>
 
-        </Routes>
       </div>
+      <Footer />
     </div>
   );
 };
