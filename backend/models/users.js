@@ -7,7 +7,9 @@ const userSchema = new Schema({
     post_code:{type: Number},
     birth_date: {type:Date}
 
-})
+    },
+    { timestamps: true }
+)
 
 const User = model("User", userSchema)
 
