@@ -10,9 +10,9 @@ import Promotions from './components/promotions/Promotions';
 import Searchbar from './components/searchbar/Searchbar';
 import Login from './components/login/Login';
 import {Route, Routes} from "react-router-dom"
+import Herosection from './components/Hero/Herosection';
 import {useEffect, useState} from "react";
 import axios from "axios";
-
 
 function App(){
   const [posts, setPosts] = useState();
@@ -24,9 +24,11 @@ function App(){
   },[])
   
   return (
+
     <div className="page-container">
       <div className="content-wrap">
-        <Navbar />
+         <Navbar/>
+      <Herosection />
         <div>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -37,6 +39,7 @@ function App(){
             <Route path='/login' element={<Login />}/>
           </Routes>
         </div>
+
 
       </div>
       <Footer />
