@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect } from 'react';
-import axios from axios;
+import axios from "axios";
 
 console.log("test");
 
@@ -33,8 +33,8 @@ const Login = () => {
                 );
                 const accessToken = response?.data?.accessToken;
                 const roles = response?.data?.roles;
-                setUser(""),
-                setPwd(""),
+                //setUser(""),
+                //setPwd(""),
                 setSuccess(true)
 
                 } catch (err) {
