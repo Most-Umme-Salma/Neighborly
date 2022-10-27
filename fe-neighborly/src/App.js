@@ -6,11 +6,13 @@ import Offer from './components/offers/Offers';
 import Promotions from './components/promotions/Promotions';
 import Searchbar from './components/searchbar/Searchbar';
 import {Route, Routes} from "react-router-dom"
+import Herosection from './components/Hero/Herosection';
 
 function App() {
   return (
     <div >
       <Navbar/>
+      <Herosection />
       <div>
         <Routes>
           <Route path='/' element={<Home/>}/>
