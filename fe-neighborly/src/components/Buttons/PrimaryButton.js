@@ -1,5 +1,5 @@
 import React from "react";
-import "./Button.css"
+import './buttonstyle.css';
 
 function PrimaryButton() {
   return <button className="primaryButton">Click me!</button>;
