@@ -1,6 +1,4 @@
-
 import Footer from "./components/footer/Footer";
-
 import './App.css';
 import Navbar from './components/navbar/Navbar';
 import Home from './components/home/Home';
@@ -13,7 +11,7 @@ import {Route, Routes} from "react-router-dom"
 import Herosection from './components/Hero/Herosection';
 import {useEffect, useState} from "react";
 import axios from "axios";
-
+import Category from "./components/category/Category";
 
 function App(){
   const [posts, setPosts] = useState();
@@ -28,7 +26,7 @@ function App(){
       })
       .catch((err)=>{console.log(err)})
   },[])
-  
+ 
   return (
     <div className="page-container">
       <div className="content-wrap">
@@ -43,13 +41,12 @@ function App(){
             <Route path="/searchbar" element={<Searchbar />} />
             <Route path='/login' element={<Login />}/>
           </Routes>
+          <Category selected={selected} setSelected={setSelected} />
         </div>
-
-
       </div>
       <Footer />
     </div>
   );
-};
+}
 
 export default App;

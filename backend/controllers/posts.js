@@ -3,25 +3,23 @@ const { Post } = require("../models/posts");
 const createPost = async (req, res, next) => {
   try {
     const {
-        body: {title, description, price, img, category}
+      body: { title, description, price, img, categories },
     } = req;
 
     //save new post in db
     const newPost = await Post.create({
-        title,
-        description,
-        price,
-        img,
-        category,
-      });
+      title,
+      description,
+      price,
+      img,
+      categories,
+    });
 
     res.json(newPost);
   } catch (error) {
     res.json({ message: error.message });
   }
 };
-
-
 
 const getPost = async (req, res, next) => {
   try {
@@ -33,16 +31,25 @@ const getPost = async (req, res, next) => {
     res.json({ message: error.message });
   }
 };
+
 const getPosts = async (req, res, next) => {
+  const pNew = req.query.new;
+  const pCategory = req.query.category;
   try {
-    const findProductByCategory = await Post.find({
-      category: {
-        mainCategory: req.query.mainCategory,
-        subCategory: { $in: req.query.subCategory },
-      },
-    });
+    let posts;
+    if (pNew) {
+      posts = await Post.find().sort({ createdAt: -1 }).limit(1);
+    } else if (pCategory) {
+      posts = await Post.find({
+        categories: {
+          $in: [pCategory],
+        },
+      });
+    } else {
+      posts = await Post.find();
+    }
     /*const posts = Post.find({});*/
-    res.json(post);
+    res.json(posts);
   } catch (error) {
     res.json({ message: error.message });
   }
