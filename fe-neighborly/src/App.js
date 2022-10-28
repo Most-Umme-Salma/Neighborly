@@ -13,20 +13,20 @@ import {useEffect, useState} from "react";
 import axios from "axios";
 import Category from "./components/category/Category";
 
-function App() {
+function App(){
   const [posts, setPosts] = useState();
-  const [selected, setSelected] = useState("");
-  useEffect(() => {
+  const [product, setProduct] = useState([]);
+  useEffect(()=>{
     axios
       .get("http://localhost:3001")
-      .then((res) => {
-        setPosts(res.data);
+      .then((res)=>{
+        setPosts(res.data)
+        // setProduct(res.data)
+        console.log(res)
       })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
-
+      .catch((err)=>{console.log(err)})
+  },[])
+ 
   return (
     <div className="page-container">
       <div className="content-wrap">
