@@ -6,3 +6,4 @@ function PrimaryButton({text}) {
 }
 
 export default PrimaryButton;
+

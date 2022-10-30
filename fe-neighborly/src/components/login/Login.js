@@ -91,7 +91,7 @@ const Login = () => {
                                 required
                             />
                         </div>
-                        <div className='rememberBox'>
+                        <div id='rememberBox'>
                             <input type="checkbox" id="remember" name="remember" value="remember" />
                                 <label htmlFor="remember">Remember</label>
                             <a href='/'>Forgot password</a>
@@ -100,7 +100,7 @@ const Login = () => {
                         <PrimaryButton text="Sign in"/>
                         </div>
                     </form>
-                    
+
                     <p id="signupField">
                         Need an Account?<br />
                         <span className="line">

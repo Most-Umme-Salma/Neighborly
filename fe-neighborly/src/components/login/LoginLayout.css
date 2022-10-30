@@ -20,13 +20,12 @@
 }
 
 .LoginPageRight {
-    border: 1px solid blue;
-    background-image: url("../../Img/helping-hand-login.jpg");
+    background-image: url("../../Img/helping-hand.jpg");
     background-size: contain;
     overflow: hidden;
     width: 40%;
     height: 40rem;
-
+    border-radius: 0rem 1rem 1rem 0rem;
 }
 
 #username {
@@ -74,13 +73,13 @@ input:focus {
     margin-bottom: 1.5rem;
 }
 
-.rememberBox {
+#rememberBox {
     display: flex;
     justify-content: space-between;
 }
 
-.signupField {
-    display: inherit;
+#signupField {
+    display: flex;
     gap: 1rem;
     padding: 1rem;
     border-top: 1px solid #d6d6d6;

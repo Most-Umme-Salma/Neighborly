@@ -6,3 +6,4 @@ function SecondaryButton({text}) {
 }
 
 export default SecondaryButton;
+
