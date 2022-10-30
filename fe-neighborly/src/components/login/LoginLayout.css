@@ -1,0 +1,53 @@
+.LoginPagePartentContainer {
+    display: flex;
+    max-width: 100%;
+    flex-wrap: nowrap;
+    padding: 4rem;
+}
+
+.LoginPageLeft {
+    border: 1px solid red;
+    width: 60%;
+    height: 40rem;
+    align-items: center;
+    color: black;
+    padding: 0 auto;
+    justify-content: center;
+}
+
+.LoginPageRight {
+    border: 1px solid blue;
+    background-image: url("https://www.westend61.de/images/0000941187pw/happy-couple-painting-wall-in-apartment-together-BSZF00426.jpg");
+    overflow: hidden;
+    width: 40%;
+    height: 40rem;
+
+}
+
+#username {
+    background-color: #80808080;
+}
+
+#usernameField {
+    background-color: #80808080;
+    padding: 1rem;
+    width: 30%;
+    border-radius: 5px 5px 0px 0px;
+    margin-top: 1rem;
+}
+
+#password {
+    background-color: #80808080;
+}
+
+#passwordField {
+    background-color: #80808080;
+    padding: 1rem;
+    width: 30%;
+    border-radius: 0px 0px 5px 5px;
+    margin-bottom: 1rem;
+}
+
+.signupField {
+    display: inline;
+}

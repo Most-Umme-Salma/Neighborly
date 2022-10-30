@@ -1,8 +1,7 @@
 import { useRef, useState, useEffect } from 'react';
 import axios from "axios";
 import "./LoginLayout.css"
-
-console.log("test");
+import PrimaryButton from "../Buttons/PrimaryButton"
 
 const Login = () => {
     const userRef = useRef();
@@ -63,32 +62,43 @@ const Login = () => {
                     </p>
                 </section>
             ) : (
-                <section>
+                <div className='LoginPageParentContainer'>
+                <section className='LoginPageLeft'>
                     <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
                     <h1>Sign In</h1>
                     <form onSubmit={handleSubmit}>
-                        <label htmlFor="username">Username:</label>
-                        <input
-                            type="text"
-                            id="username"
-                            ref={userRef}
-                            autoComplete="off"
-                            onChange={(e) => setUser(e.target.value)}
-                            value={user}
-                            required
-                        />
-
-                        <label htmlFor="password">Password:</label>
-                        <input
-                            type="password"
-                            id="password"
-                            onChange={(e) => setPwd(e.target.value)}
-                            value={pwd}
-                            required
-                        />
-                        <button>Sign In</button>
+                        <div id='usernameField'>
+                            <label htmlFor="username">Username:</label>
+                            <input
+                                type="text"
+                                id="username"
+                                placeholder='Enter Username'
+                                ref={userRef}
+                                autoComplete="off"
+                                onChange={(e) => setUser(e.target.value)}
+                                value={user}
+                                required
+                            />
+                        </div>
+                        <div id='passwordField'>
+                            <label htmlFor="password">Password:</label>
+                            <input
+                                type="password"
+                                id="password"
+                                placeholder='Enter Password'
+                                onChange={(e) => setPwd(e.target.value)}
+                                value={pwd}
+                                required
+                            />
+                        </div>
+                        <div>
+                            <input type="checkbox" id="remember" name="remember" value="remember" />
+                                <label htmlFor="remember">Remember me!</label>
+                            <a href='/'>Forgot password?</a>
+                        </div>
+                        <PrimaryButton />
                     </form>
-                    <p>
+                    <p id="signupField">
                         Need an Account?<br />
                         <span className="line">
                             {/*router link*/}
@@ -96,6 +106,9 @@ const Login = () => {
                         </span>
                     </p>
                 </section>
+                <div className='LoginPageRight'>
+                </div>
+            </div>
             )}
         </>
     )
