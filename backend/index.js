@@ -22,9 +22,10 @@ app.use(helmet());
 app.use(cors());
 
 app.get("/", (req,res)=>{
-    res.send("Testing get request")
-
+    
 });
+
+
 app.get("/cors", (req,res)=>{
     res.set('Access-Controll-Allow-Origin', '*')
     res.send({"msg" : "This should have Cors enabled"})

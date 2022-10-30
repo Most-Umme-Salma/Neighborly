@@ -1,0 +1,67 @@
+
+
+h1 {
+    position: absolute;
+    top: 56px;
+    left: 132px;
+    font-family: Inter;
+    font-size: 32px;
+    line-height: 48px;
+    color: #171A1FFF;
+  }
+
+  .newoffer{
+      display:flex;
+  }
+  input{
+    color:black;
+    
+}
+  .submitForm{
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between;
+
+  }
+  .summary{
+    display:flex; 
+    background: #FAFAFBFF;
+    width: 40%;
+    height: 40rem;
+  }
+
+ .title .description .category .condition .location .price .upload{
+   display: flex;
+   border: 2px; 
+    color: rgb(23, 26, 31);}
+    
+
+.description{
+    
+    color: #171A1FFF;
+  }
+  .price{ position: absolute;
+    
+    color: #171A1FFF;}
+
+  .category{
+    color: #171A1FFF;}
+
+  .condition{ 
+    color: #171A1FFF;}
+
+  .location{ 
+    color: #171A1FFF;}
+
+  .upload{ 
+    color: #171A1FFF;}
+
+    .summary{
+        display:flex;
+        justify-content: center;
+        top: 60px;
+        left: 0px;
+        width: 1440px;
+        height: 1213px;
+        background: #FFFFFFFF;
+        border-radius: 0px;}
