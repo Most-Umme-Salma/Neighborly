@@ -1,23 +1,28 @@
-.LoginPagePartentContainer {
+.LoginPageParentContainer {
     display: flex;
     max-width: 100%;
     flex-wrap: nowrap;
     padding: 4rem;
+    background-color: #5679a957;
 }
 
 .LoginPageLeft {
-    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
     width: 60%;
     height: 40rem;
     align-items: center;
     color: black;
     padding: 0 auto;
     justify-content: center;
+    background-color: white;
+    border-radius: 1rem 0rem 0rem 1rem;
 }
 
 .LoginPageRight {
     border: 1px solid blue;
-    background-image: url("https://www.westend61.de/images/0000941187pw/happy-couple-painting-wall-in-apartment-together-BSZF00426.jpg");
+    background-image: url("../../Img/helping-hand.jpg");
+    background-size: contain;
     overflow: hidden;
     width: 40%;
     height: 40rem;
@@ -25,29 +30,64 @@
 }
 
 #username {
-    background-color: #80808080;
+    background-color: #c4c4c486;
+    border: none;
+    border-radius: 4px;
 }
 
 #usernameField {
-    background-color: #80808080;
-    padding: 1rem;
-    width: 30%;
-    border-radius: 5px 5px 0px 0px;
+    background-color: #c4c4c460;
+    background-size: cover;
+    padding: 0.5rem;
+    width: auto;
+    border-radius: 5px;
     margin-top: 1rem;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    display: flex;
+    gap: 0.6rem;
+    margin-bottom: 1.5rem;
 }
 
 #password {
-    background-color: #80808080;
+    background-color: #c4c4c486;
+    border: none;
+    border-radius: 4px;
+}
+
+input:focus {
+    border: 2px solid white;
+    color: white;
 }
 
 #passwordField {
-    background-color: #80808080;
-    padding: 1rem;
-    width: 30%;
-    border-radius: 0px 0px 5px 5px;
-    margin-bottom: 1rem;
+    background-color: #c4c4c460;
+    background-size: cover;
+    padding: 0.5rem;
+    width: auto;
+    border-radius: 5px;
+    margin-top: 1rem;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    display: flex;
+    gap: 0.6rem;
+    margin-bottom: 1.5rem;
+}
+
+.rememberBox {
+    display: flex;
+    justify-content: space-between;
 }
 
 .signupField {
-    display: inline;
+    display: inherit;
+    gap: 1rem;
+    padding: 1rem;
+    border-top: 1px solid #d6d6d6;
+}
+
+#Button {
+    display: flex;
+    margin: 1rem auto;
+    justify-content: center;
 }

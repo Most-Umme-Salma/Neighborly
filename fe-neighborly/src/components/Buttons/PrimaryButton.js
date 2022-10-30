@@ -1,8 +1,8 @@
 import React from "react";
 import './buttonstyle.css';
 
-function PrimaryButton() {
-  return <button className="primaryButton">Click me!</button>;
+function PrimaryButton({text}) {
+  return <button className="primaryButton">{text}</button>;
 }
 
 export default PrimaryButton;
