@@ -17,12 +17,13 @@ function App() {
   const [posts, setPosts] = useState();
   const [product, setProduct] = useState([]);
   const [selected, setSelected] = useState("");
+  const [title, setTitle] = useState("");
   useEffect(() => {
     axios
       .get("http://localhost:3001")
       .then((res) => {
         setPosts(res.data);
-        // setProduct(res.data)
+        
         console.log(res);
       })
       .catch((err) => {
@@ -39,7 +40,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/offer" element={<Offer />} />
-            <Route path="/newoffer" element={<Newoffer />} />
+            <Route path="/newoffer" element={<Newoffer title={title} />} />
             <Route path="/promotions" element={<Promotions />} />
             <Route path="/searchbar" element={<Searchbar />} />
             <Route path="/login" element={<Login />} />
