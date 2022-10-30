@@ -1,5 +1,5 @@
 .nav {
-  background-color: #0c0c46;
+  background-color: #01010f;
   color: white;
   display: flex;
   justify-content: space-between;
@@ -25,10 +25,6 @@
   display: flex;
   justify-content: space-between;
   gap: 2rem;
-}
-
-.Nav-Searchbar {
-  max-height: 3rem;
 }
 
 .nav-text {
