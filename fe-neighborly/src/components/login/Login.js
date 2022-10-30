@@ -100,6 +100,7 @@ const Login = () => {
                         <PrimaryButton text="Sign in"/>
                         </div>
                     </form>
+                    
                     <p id="signupField">
                         Need an Account?<br />
                         <span className="line">
