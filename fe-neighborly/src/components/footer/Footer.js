@@ -2,14 +2,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./footer.css";
 import { BsTwitter, BsYoutube, BsLinkedin, BsFacebook } from "react-icons/bs";
+import Logo from "./../../Img/logo.png";
 
 export default function Footer() {
   return (
     <div className="footer">
       <div className="footer-container">
-        <div>
-          <h2>logo</h2>
-          <h2>Subscribe to our newsletter</h2>
+        <div className="footer-logo">
+          <img src={Logo} alt="logo" className="Logo"></img>
+          <h4>Subscribe to our newsletter</h4>
           <input
             className="footer-input"
             type="email"
@@ -18,79 +19,50 @@ export default function Footer() {
           <button className="footer-btn">Subscribe</button>
         </div>
         <div className="footer-row">
-          <div className="nav-col">
-            <h2>Product</h2>
-            <ul>
-              <li>
-                <Link className="footer-link" href="#">
-                  Features
-                </Link>
-              </li>
-              <li>
-                <Link className="footer-link" href="#">
-                  Pricing
-                </Link>
-              </li>
-            </ul>
+          <div className="footer-col">
+            <h5>Product</h5>
+            <Link className="footer-link" href="#">
+              Features
+            </Link>
+            <Link className="footer-link" href="#">
+              Pricing
+            </Link>
           </div>
-          <div className="nav-col">
-            <h2>Resources</h2>
-            <ul>
-              <li>
-                <Link className="footer-link" href="#">
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link className="footer-link" href="#">
-                  User guides
-                </Link>
-              </li>
-              <li>
-                <Link className="footer-link" href="#">
-                  Webinars
-                </Link>
-              </li>
-            </ul>
+          <div className="footer-col">
+            <h5>Resources</h5>
+            <Link className="footer-link" href="#">
+              Blog
+            </Link>
+            <Link className="footer-link" href="#">
+              User guides
+            </Link>
+            <Link className="footer-link" href="#">
+              Webinars
+            </Link>
           </div>
-          <div className="nav-col">
-            <h2>Company</h2>
-            <ul>
-              <li>
-                <Link className="footer-link" href="#">
-                  About us
-                </Link>
-              </li>
-              <li>
-                <Link className="footer-link" href="#">
-                  Contact us
-                </Link>
-              </li>
-            </ul>
+          <div className="footer-col">
+            <h5>Plans & Pricing</h5>
+            <Link className="footer-link" href="#">
+              Personal
+            </Link>
+            <Link className="footer-link" href="#">
+              Start up
+            </Link>
+            <Link className="footer-link" href="#">
+              Organization
+            </Link>
           </div>
-          <div className="nav-col">
-            <h2>Plans & Pricing</h2>
-            <ul>
-              <li>
-                <Link className="footer-link" href="#">
-                  Personal
-                </Link>
-              </li>
-              <li>
-                <Link className="footer-link" href="#">
-                  Start up
-                </Link>
-              </li>
-              <li>
-                <Link className="footer-link" href="#">
-                  Organization
-                </Link>
-              </li>
-            </ul>
+          <div className="footer-col">
+            <h5>Company</h5>
+            <Link className="footer-link" href="#">
+              About us
+            </Link>
+            <Link className="footer-link" href="#">
+              Contact us
+            </Link>
           </div>
         </div>
-        <div className="footer-row">
-          <button className="language-btn">Language</button>
+        <div className="footer-row footer-end">
           <p>
             &copy;{new Date().getFullYear()} Brand, Inc. • Privacy • Terms •
             Sitemap
