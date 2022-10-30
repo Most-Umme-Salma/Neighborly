@@ -1,36 +1,34 @@
-import "./style/newOffer.css";
 import TertiaryButton from "../Buttons/TertiaryButton";
 
 export default function Input({handleSubmit, handleChange, title}){
-    
 
-    
-    
     return(
         <form onSubmit={handleSubmit} className="submitForm">
-            <h1>Create New Offer</h1>
             <div className="title">
                 <h3>Title</h3> 
-                <input className="searchInput" type="text" onChange={handleChange} value={title} />        </div>
+                <input className="searchInput" type="text" onChange={handleChange} value={title} />
+            </div>
             <div className="description">
                 <h3>Description</h3>
-                <input type="textarea" maxLength="50" onChange={handleChange}/>
+                <textarea rows={4} onChange={handleChange}/>
             </div>
             <div className="price">
                 <h3>Price</h3>
+                <div className="d-flex">
                 <select name="currency">
                 <option value="euro">Eur</option>
                 <option value="dodge">DodgeCoin</option>
                 <option value="bitcoin">Bitcoin</option>
                 </select>
                 <input type="number" onChange={handleChange} />
+                </div>
             </div>
             <div className="category">
                 <h3>Category</h3>
                 <select name="category">
                 <option value="electric">Electric</option>
                 <option value="home">Home</option>
-                <option value="service">service</option>
+                <option value="service">Service</option>
                 </select>
             </div>
             <div className="condition">
@@ -48,7 +46,7 @@ export default function Input({handleSubmit, handleChange, title}){
                 <h3>Upload picture</h3>
                 <input type="image" />
             </div>
-            < TertiaryButton />
+            <TertiaryButton />
         </form> 
        
         
