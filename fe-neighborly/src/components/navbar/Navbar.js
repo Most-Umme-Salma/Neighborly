@@ -1,7 +1,7 @@
 import { NavLink, Link } from "react-router-dom";
 import "./navbar.css";
 import { BsFillCartDashFill, BsBellFill } from "react-icons/bs";
-import Logo from "./../../Img/logo.png"
+import Logo from "./../../Img/logo.png";
 import Searchbar from "../searchbar/Searchbar";
 
 export default function Navbar() {
@@ -9,9 +9,11 @@ export default function Navbar() {
     <nav>
       <div className="nav">
         <div className="nav-left">
-          <NavLink to="/" className="nav-text">
-            <img src={Logo} alt="logo" className="Logo"></img>
-          </NavLink>
+          <div>
+            <NavLink to="/" className="nav-text">
+              <img src={Logo} alt="logo" className="Logo"></img>
+            </NavLink>
+          </div>
           <NavLink to="/offer" className="nav-text">
             offers
           </NavLink>
