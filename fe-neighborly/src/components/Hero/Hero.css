@@ -48,6 +48,7 @@
     border-radius: 15px;
     padding: 0.5rem;
     border-color: 1px solid black ;
+    background-size: cover;
     margin-bottom: 4rem;
 }
 

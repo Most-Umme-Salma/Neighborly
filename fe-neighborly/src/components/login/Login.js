@@ -92,13 +92,16 @@ const Login = () => {
                                 required
                             />
                         </div>
-                        <div>
+                        <div id='rememberBox'>
                             <input type="checkbox" id="remember" name="remember" value="remember" />
-                                <label htmlFor="remember">Remember me!</label>
-                            <a href='/'>Forgot password?</a>
+                                <label htmlFor="remember">Remember</label>
+                            <a href='/'>Forgot password</a>
                         </div>
-                        <PrimaryButton />
+                        <div id='Button'>
+                        <PrimaryButton text="Sign in"/>
+                        </div>
                     </form>
+
                     <p id="signupField">
                         Need an Account?<br />
                         <span className="line">
@@ -114,5 +117,6 @@ const Login = () => {
         </>
     )
 }
+
 
 export default Login

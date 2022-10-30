@@ -1,6 +1,7 @@
 import "./searchbar.css"
 import PrimaryButton from "../Buttons/PrimaryButton"
 import TertiaryButton from "../Buttons/TertiaryButton";
+import SecondaryButton from "../Buttons/SecondaryButton";
 
 function Searchbar(){
 
@@ -29,8 +30,8 @@ function Searchbar(){
         placeholder="Search your Neighbourhood"
         />
         <div className="button-container">
-        <TertiaryButton />
-        <PrimaryButton />
+        <SecondaryButton text="Categories"/>
+        <PrimaryButton text="search"/>
         </div>
     </div>
 }

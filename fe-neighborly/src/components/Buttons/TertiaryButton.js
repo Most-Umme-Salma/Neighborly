@@ -1,8 +1,8 @@
 import React from "react";
 import "./buttonstyle.css";
 
-function TertiaryButton() {
-  return <button className="tertiaryButton">Submit</button>;
+function TertiaryButton({text}) {
+  return <button className="tertiaryButton">{text}</button>;
 }
 
 export default TertiaryButton;
