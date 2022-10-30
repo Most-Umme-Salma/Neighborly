@@ -6,4 +6,3 @@ function TertiaryButton({text}) {
 }
 
 export default TertiaryButton;
-

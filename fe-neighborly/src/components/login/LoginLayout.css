@@ -20,7 +20,7 @@
 }
 
 .LoginPageRight {
-    background-image: url("../../Img/helping-hand.jpg");
+    background-image: url("../../Img/helping-hand-login.jpg");
     background-size: contain;
     overflow: hidden;
     width: 40%;
@@ -90,3 +90,4 @@ input:focus {
     margin: 1rem auto;
     justify-content: center;
 }
+
