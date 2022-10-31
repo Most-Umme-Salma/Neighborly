@@ -18,8 +18,10 @@ export default function Newoffer({}){
 
     const handleChange =(e)=>{
         const {name, value} = e.target;
-        console.log({name, value})
-        setState({name, value})
+        
+        const copy = {...state};
+            copy[name] = value;
+            setState(copy);
     }
 
     const handleSubmit =(e)=>{
@@ -32,6 +34,6 @@ export default function Newoffer({}){
     return(
     <div className="newoffer">
          <Input handleSubmit={handleSubmit} handleChange={handleChange} state={state} setState={setState} />
-         <Summary /> {}
+         <Summary state={state} setState={setState} handleChange={handleChange} /> {}
     </div>)
 }

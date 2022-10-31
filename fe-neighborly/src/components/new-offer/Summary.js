@@ -1,9 +1,10 @@
 import { BsFillCartDashFill } from "react-icons/bs";
 import PrimaryButton from '../Buttons/PrimaryButton'
+import Newoffer from "./Newoffer";
 
 
-export default function Summary(){
-
+export default function Summary({state, setState}){
+    console.log(state)
     return(
     <section className="summary">   
             <div className="summary-head d-flex">
@@ -13,12 +14,13 @@ export default function Summary(){
             <div className="summary-body">
                 <h4>Price</h4>
                 <p>icon</p>
-                <p>11.98</p>
+                {console.log(state.price )}
+                <p>{state.price}</p>
             </div>
             <div className="preview">
                 <h4>Preview</h4>
                 <p>image</p>
-                <h5>Asset title + maybe id</h5>
+                <h5  >{state.title}</h5>
                 <p>Non occaecat qui voluptate cillum ut quis elit ex eu velit exercitation commodo eu ut ea occaecat. Reprehenderit consequat duis sit nostrud non dolore ad qui voluptate irure duis nulla sint sit minim voluptate aute non exercitation. Lorem cupidatat proident irure occaecat tempor</p>
             </div>
             <div className="d-flex p-8">
