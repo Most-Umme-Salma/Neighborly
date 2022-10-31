@@ -4,26 +4,34 @@
  import {useState} from "react";
 
 export default function Newoffer({}){
-    const [title, setTitle] = useState([]);
-    const [aux, setAux] = useState();
+    const [state, setState] = useState({
+        title: "",
+        desc: "",
+        price: "",
+        category: "",
+        condition:"",
+        location: "",
+        currency: ""
+    });
+    
 
 
     const handleChange =(e)=>{
-        //console.log(e.target.value)
-        setTitle(e.target.value)
-       
+        const {name, value} = e.target;
+        console.log({name, value})
+        setState({name, value})
     }
 
     const handleSubmit =(e)=>{
         console.log("you submited")
         e.preventDefault();
-        setAux(title)
+       
     }
     
     
     return(
     <div className="newoffer">
-         <Input handleSubmit={handleSubmit} handleChange={handleChange} title={title} />
-         <Summary /> {console.log(title)}
+         <Input handleSubmit={handleSubmit} handleChange={handleChange} state={state} setState={setState} />
+         <Summary /> {}
     </div>)
 }

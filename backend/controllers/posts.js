@@ -3,7 +3,14 @@ const { Post } = require("../models/posts");
 const createPost = async (req, res, next) => {
   try {
     const {
-      body: { title, description, price, img, categories },
+      body: { title,
+        description,
+        price,
+        categories,
+        condition,
+        post_code,
+        currency,
+        img, },
     } = req;
 
     //save new post in db
@@ -11,8 +18,11 @@ const createPost = async (req, res, next) => {
       title,
       description,
       price,
-      img,
       categories,
+      condition,
+      post_code,
+      currency,
+      img,
     });
 
     res.json(newPost);
