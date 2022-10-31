@@ -1,15 +1,21 @@
 import Pricefilter from "./Pricefilter";
-import RetingsFilter from "./RetingsFilter";
-export default function Home(value) {
+
+import ProductsDisplay from "../Product/ProductsDisplay";
+import Category from "../category/Category";
+
+export default function Home({ posts, setPosts, selected, setSelected }) {
   return (
     <div>
+      <Category selected={selected} setSelected={setSelected} />
       <div className="filters">
         <p>Filter by price</p>
-        <Pricefilter value={value} />
+        <Pricefilter />
       </div>
+      <ProductsDisplay posts={posts} />
+
       <div className="filters">
         <p>Filter by Retings</p>
-        <RetingsFilter />
+        {/* <RetingsFilter />*/}
       </div>
     </div>
   );
