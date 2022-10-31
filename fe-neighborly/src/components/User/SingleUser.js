@@ -35,15 +35,15 @@ function SingleUser() {
             {/* <p className="location">From: {user.post_code}</p> */}
             <div className="location flex">
                 <p id="flexStart">From:</p>
-                <p id="flexEnd">Berlin</p>
+                <p id="flexEnd bold">Berlin</p>
             </div>
             <div className="memberSince flex">
                 <p>Member since:</p>
-                <p>2022</p>
+                <p className="bold">2022</p>
             </div>
             <div className="responseTime flex">
                 <p>Response Time:</p>
-                <p>1.5 hours</p>
+                <p className="bold">1.5 hours</p>
             </div>
             {/* <p className="longDescription">{user.description}</p> */}
             <p className="longDescription">meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow</p>
