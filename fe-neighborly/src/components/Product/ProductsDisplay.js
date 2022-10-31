@@ -11,7 +11,7 @@ const ProductsDisplay = ({ posts }) => {
   // }
   return (
     <div className="wrapper">
-      {posts.map((product, _id) => {
+      {posts?.map((product, _id) => {
         return (
           <section key={_id} className="product-cards">
             {<img className="image" src={product.img} />}

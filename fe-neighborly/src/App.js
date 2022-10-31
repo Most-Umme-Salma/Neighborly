@@ -24,7 +24,6 @@ function App() {
       .get(`http://localhost:3001/posts?category=${selected}`)
       .then((res) => {
         setPosts(res.data);
-
         console.log(res.data);
       })
       .catch((err) => {
@@ -55,7 +54,7 @@ function App() {
             <Route path="/promotions" element={<Promotions />} />
             <Route path="/searchbar" element={<Searchbar />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/user" element={<UserPage />} />
+            <Route path="/users/:id" element={<UserPage />} />
           </Routes>
         </div>
       </div>

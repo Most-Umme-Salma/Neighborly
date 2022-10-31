@@ -25,8 +25,8 @@ const Login = () => {
         e.preventDefault();
         
             try {
-                const response = await axios.post("http://localhost:3001/login",
-                    { username: user, password: pwd },
+                const response = await axios.post("http://localhost:3001/auth/login",
+                    { email: user, password: pwd },
                     {
                         headers: { 'Content-Type': 'application/json' },
                         withCredentials: true
@@ -37,6 +37,7 @@ const Login = () => {
                 // setUser(""),
                 // setPwd(""),
                 setSuccess(true)
+                console.log(response)
 
                 } catch (err) {
                 if (!err?.response) {

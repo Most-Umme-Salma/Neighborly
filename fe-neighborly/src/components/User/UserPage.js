@@ -1,11 +1,11 @@
-// import ProductsDisplay from "../Product/ProductsDisplay"
+import ProductsDisplay from "../Product/ProductsDisplay"
 import SingleUser from "./SingleUser";
 
 function UserPage() {
     return (
       <div className="UserPage">
         <SingleUser />
-        {/* <ProductsDisplay /> */}
+        <ProductsDisplay />
       </div>
     );
   }

@@ -1,17 +1,18 @@
 const { User } = require("../models/users");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
+const { request } = require("express");
 
 const login = async (req, res, next) => {
   try {
     const email = req.body.email;
     const password = req.body.password;
-    console.log("test");
-
-    const useremail = await register.findOne({ email: email });
-
+    
+    const useremail = await User.findOne({ email: email });
+    console.log(useremail, password);
+    
     if (useremail.password === password) {
-      res.status(201).render("index");
+      res.status(201).json(useremail);
     } else {
       res.send("password are not matching");
     }
@@ -57,7 +58,28 @@ const signup = async (req, res, next) => {
   }
 };
 
+const getUsers = async(req, res, next) => {
+  try {
+    const users = await User.find({})
+    res.json(users)
+  } catch (error) {
+    next(error)
+  }
+}
+
+const getUser = async(req, res, next) => {
+  try {
+    const id = req.params.id
+    const user = await User.findOne({_id:id})
+    res.json(user)
+  } catch (error) {
+    next(error)
+  }
+}
+
 module.exports = {
   login,
   signup,
+  getUsers,
+  getUser,
 };
