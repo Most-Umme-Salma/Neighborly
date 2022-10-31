@@ -29,6 +29,9 @@ input, select, option {
   color: rgba(0,0,0,1);
   padding: 16px;
 }
+.black{
+  color:black;
+}
 
 .submitForm{
   display: flex; 
