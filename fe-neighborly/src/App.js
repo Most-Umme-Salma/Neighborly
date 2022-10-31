@@ -12,6 +12,7 @@ import Herosection from "./components/Hero/Herosection";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Category from "./components/category/Category";
+import UserPage from "./components/User/UserPage"
 
 function App() {
   const [posts, setPosts] = useState();
@@ -44,6 +45,7 @@ function App() {
             <Route path="/promotions" element={<Promotions />} />
             <Route path="/searchbar" element={<Searchbar />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/user" element={<UserPage />} />
           </Routes>
           <Category selected={selected} setSelected={setSelected} />
         </div>
