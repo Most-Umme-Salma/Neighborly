@@ -13,6 +13,7 @@
 }
 .dropdown-content {
   position: absolute;
+  z-index: 2;
   top: 110%;
   padding: 1rem;
   background-color: white;

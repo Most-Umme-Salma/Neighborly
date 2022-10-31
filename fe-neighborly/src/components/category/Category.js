@@ -7,7 +7,7 @@ export default function Category({ selected, setSelected }) {
   return (
     <div className="dropdown">
       <div className="dropdown-dtn " onClick={(e) => setIsActive(!isActive)}>
-        <div>Categories</div>
+        <div>{selected ? selected : "categories"}</div>
         <div>
           <BsCaretDownFill size={15} />
         </div>
@@ -18,42 +18,42 @@ export default function Category({ selected, setSelected }) {
           <div className="dropdown-items">
             <div
               onClick={(e) => {
-                setSelected(e.target.posts);
+                setSelected(e.target.textContent);
                 setIsActive(false);
               }}
             >
-              All
+              all
             </div>
           </div>
 
           <div className="dropdown-items">
             <div
               onClick={(e) => {
-                setSelected(e.target.food);
+                setSelected(e.target.textContent);
                 setIsActive(false);
               }}
             >
-              Hobby + Services
+              hobby
             </div>
           </div>
           <div className="dropdown-items">
             <div
               onClick={(e) => {
-                setSelected(e.target.services);
+                setSelected(e.target.textContent);
                 setIsActive(false);
               }}
             >
-              Household + Services
+              household
             </div>
           </div>
           <div className="dropdown-items">
             <div
               onClick={(e) => {
-                setSelected(e.target.services);
+                setSelected(e.target.textContent);
                 setIsActive(false);
               }}
             >
-              NewOffer
+              offer
             </div>
           </div>
         </div>

@@ -14,22 +14,22 @@ import axios from "axios";
 import Category from "./components/category/Category";
 
 function App() {
-  const [posts, setPosts] = useState();
+  const [posts, setPosts] = useState([]);
   const [product, setProduct] = useState([]);
   const [selected, setSelected] = useState("");
   const [title, setTitle] = useState("");
   useEffect(() => {
     axios
-      .get("http://localhost:3001")
+      .get(`http://localhost:3001/posts?category=${selected}`)
       .then((res) => {
         setPosts(res.data);
-        
-        console.log(res);
+
+        console.log(res.data);
       })
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, [selected]);
 
   return (
     <div className="page-container">
@@ -38,14 +38,23 @@ function App() {
         <Herosection />
         <div>
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route
+              path="/"
+              element={
+                <Home
+                  posts={posts}
+                  setPosts={setPosts}
+                  selected={selected}
+                  setSelected={setSelected}
+                />
+              }
+            />
             <Route path="/offer" element={<Offer />} />
             <Route path="/newoffer" element={<Newoffer title={title} />} />
             <Route path="/promotions" element={<Promotions />} />
             <Route path="/searchbar" element={<Searchbar />} />
             <Route path="/login" element={<Login />} />
           </Routes>
-          <Category selected={selected} setSelected={setSelected} />
         </div>
       </div>
       <Footer />
