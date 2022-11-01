@@ -26,14 +26,14 @@
 .footer-btn {
   background-color: rgb(39, 64, 97);
   color: white;
-  padding: 0.3rem 0.8rem;
-  border-radius: 1rem;
+  padding: 16px;
+  border-radius: 8px;
 }
 .footer-input {
   text-align: center;
-  width: 9rem;
-  height: 1.6rem;
-  border-radius: 1rem;
+  width: 200px;
+  padding: 16px;
+  border-radius: 8px;
 }
 input::placeholder {
   opacity: 0.5;
@@ -48,7 +48,7 @@ input::placeholder {
 .language-btn {
   background-color: rgb(39, 64, 97);
   color: white;
-  padding: 0.005rem 3rem;
+  padding: 16px;
 }
 .footer-link:hover {
   background-color: #777;
@@ -73,13 +73,11 @@ input::placeholder {
   display: flex;
   justify-content: space-around;
 }
-@media screen and (max-width: 45em) {
-  .footer {
-    flex-wrap: wrap-reverse;
-  }
-}
-@media screen and (max-width: 35em) {
-  .footer {
-    flex-wrap: wrap;
+
+@media (max-width: 768px) {
+  .d-sm-col {
+    flex-direction: column;
+    gap: 16px;
+    padding: 0 32px;
   }
 }

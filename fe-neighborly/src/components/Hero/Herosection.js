@@ -8,14 +8,12 @@ function Herosection() {
   return (
     <div className="Hero-Section">
         <div className='Hero-Main-Box'>
-                <div className='Hero-Text'>
-                   <h1>Neighbourly</h1>
-                   <h2>Helping pays!</h2>
-                    <p>At Neighbourly its all about helping eachother. Find a new Job or someone to help you.</p>
-                </div>
-                <div className="Searchbar-Background">
-                   <Searchbar />
-                </div>
+          <div className='Hero-Text'>
+              <h1>Neighbourly</h1>
+              <h2>Helping pays!</h2>
+              <p>At Neighbourly its all about helping eachother. Find a new Job or someone to help you.</p>
+          </div>
+          <Searchbar />
         </div>
     </div>
   );
