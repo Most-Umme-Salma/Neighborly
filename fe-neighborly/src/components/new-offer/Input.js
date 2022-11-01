@@ -55,8 +55,8 @@ export default function Input({ handleChange, text, state, setState}){
             <div className="condition">
                 <h3>Condition</h3>
                 <select name="condition" {...register("condition", {onChange: handleChange})} className="p-8 w-100" >
-                <option value="used">Used</option>
-                <option value="new">new</option>
+                <option value="Used">Used</option>
+                <option value="New">New</option>
                 </select>
             </div>
             <div className="location">
