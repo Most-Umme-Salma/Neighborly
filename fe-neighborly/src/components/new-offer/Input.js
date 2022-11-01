@@ -26,27 +26,27 @@ export default function Input({ handleChange, state, setState}){
         <form onSubmit={handleSubmit(onSubmit)} className="submitForm">
             <div className="title">
                 <h3>Title</h3> 
-                <input className="black" type="text" onChange={handleChange}   {...register("title", { required: true })} />
+                <input className="black" type="text" {...register("title", {onChange: handleChange})} />
             </div>
             <div className="description">
                 <h3>Description</h3>
-                <textarea rows={4} onChange={handleChange}  {...register("description", { required: true })} />
+                <textarea rows={4} {...register("description", {onChange: handleChange})}/>
             </div>
            
             <div className="price">
                 <h3>Price</h3>
                 <div className="d-flex">
-                <select name="currency"  onChange={handleChange}  {...register("currency")}>
+                <select name="currency" {...register("currency", {onChange: handleChange})}>
                 <option value="euro">Eur</option>
                 <option value="dodge">DodgeCoin</option>
                 <option value="bitcoin">Bitcoin</option>
                 </select>
-                <input type="number" onChange={handleChange}  {...register("price", { required: true })} />
+                <input type="number" {...register("price", {onChange: handleChange})}/>
                 </div>
             </div>
             <div className="category">
                 <h3>Category</h3>
-                <select name="category"  onChange={handleChange}  {...register("category", { required: true })}>
+                <select name="category" {...register("category", {onChange: handleChange})} >
                 <option value="electric">Electric</option>
                 <option value="home">Home</option>
                 <option value="service">Service</option>
@@ -54,14 +54,14 @@ export default function Input({ handleChange, state, setState}){
             </div>
             <div className="condition">
                 <h3>Condition</h3>
-                <select name="condition"  onChange={handleChange}  {...register("category", { required: true })} >
+                <select name="condition" {...register("condition", {onChange: handleChange})}>
                 <option value="used">Used</option>
                 <option value="new">new</option>
                 </select>
             </div>
             <div className="location">
                 <h3>Location</h3>
-                <input type="number" maxLength="5" placeholder="Enter PLZ"  {...register("location", { required: true })} onChange={handleChange}/>
+                <input type="number" maxLength="5" placeholder="Enter PLZ" {...register("lcoation", {onChange: handleChange})}/>
             </div>
             <div className="upload">
                 <h3>Upload picture</h3>

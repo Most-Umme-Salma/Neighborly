@@ -20,7 +20,7 @@ export default function Summary({state, setState}){
                 <h4>Preview</h4>
                 <p>image</p>
                 <h5>{state.title || "Title"}</h5>
-                <p>{state.desc || "Non occaecat qui voluptate cillum ut quis elit ex eu velit exercitation commodo eu ut ea occaecat. Reprehenderit consequat duis sit nostrud non dolore ad qui voluptate irure duis nulla sint sit minim voluptate aute non exercitation. Lorem cupidatat proident irure occaecat tempor"}</p>
+                <p>{state.description || "Non occaecat qui voluptate cillum ut quis elit ex eu velit exercitation commodo eu ut ea occaecat. Reprehenderit consequat duis sit nostrud non dolore ad qui voluptate irure duis nulla sint sit minim voluptate aute non exercitation. Lorem cupidatat proident irure occaecat tempor"}</p>
             </div>
             <div className="d-flex p-8">
             <span className="tag p-8">{state.condition || "new"}</span>
