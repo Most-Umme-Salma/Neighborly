@@ -6,7 +6,7 @@ import "./style/newOffer.css";
 export default function Newoffer({}){
     const [state, setState] = useState({
         title: "",
-        desc: "",
+        description: "",
         price: "",
         category: "",
         condition:"",

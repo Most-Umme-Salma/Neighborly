@@ -6,7 +6,7 @@ const postSchema = new Schema(
     description: { type: String, required: true },
     price: { type: Number, required: true },
     categories: { type: Array },
-    condition: {type: Boolean},
+    condition: {type: Array},
     post_code: { type: Number },
     currency: {type: String},
     img: { type: String },
