@@ -50,7 +50,7 @@ function App() {
         <Herosection product={product}/>
         <div>
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Home product={product} />} />
             <Route
               path="/offer"
               element={

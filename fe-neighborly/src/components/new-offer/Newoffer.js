@@ -9,7 +9,7 @@ export default function Newoffer({}){
         description: "",
         price: "",
         category: "",
-        condition:"",
+        condition: "",
         location: "",
         currency: ""
     });
