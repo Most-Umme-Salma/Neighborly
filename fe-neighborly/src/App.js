@@ -4,16 +4,15 @@ import Navbar from "./components/navbar/Navbar";
 import Home from "./components/home/Home";
 import Newoffer from "./components/new-offer/Newoffer";
 import Offer from "./components/offers/Offers";
-import Promotions from "./components/promotions/Promotions";
 import Searchbar from "./components/searchbar/Searchbar";
 import Login from "./components/login/Login";
 import { Route, Routes } from "react-router-dom";
 import Herosection from "./components/Hero/Herosection";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Category from "./components/category/Category";
-import UserPage from "./components/User/UserPage"
+import UserPage from "./components/User/UserPage";
 import Register from "./components/Register/Register";
+
 
 function App() {
   const [posts, setPosts] = useState([]);
@@ -39,10 +38,11 @@ function App() {
         <Herosection />
         <div>
           <Routes>
+            <Route path="/" element={<Home />} />
             <Route
-              path="/"
+              path="/offer"
               element={
-                <Home
+                <Offer
                   posts={posts}
                   setPosts={setPosts}
                   selected={selected}
@@ -50,9 +50,7 @@ function App() {
                 />
               }
             />
-            <Route path="/offer" element={<Offer />} />
             <Route path="/newoffer" element={<Newoffer title={title} />} />
-            <Route path="/promotions" element={<Promotions />} />
             <Route path="/searchbar" element={<Searchbar />} />
             <Route path="/login" element={<Login />} />
             <Route path="/users/:id" element={<UserPage />} />

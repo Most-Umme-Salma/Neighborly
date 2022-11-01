@@ -1,5 +1,5 @@
 .nav {
-  background-color: #01010f;
+  background-color: #030322;
   color: white;
   display: flex;
   justify-content: space-between;
@@ -35,4 +35,10 @@
 }
 .nav-text:hover {
   background-color: #777;
+}
+.nav-btn {
+  display: flex;
+  color: black;
+  text-decoration: none;
+  text-align: center;
 }

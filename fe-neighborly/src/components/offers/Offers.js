@@ -1,5 +1,16 @@
-export default function Offers(){
+import Pricefilter from "../home/Pricefilter";
+import ProductsDisplay from "../Product/ProductsDisplay";
+import Category from "../category/Category";
 
-    
-    return <h1>Offers</h1>
+export default function Offers({ posts, setPosts, selected, setSelected }) {
+  return (
+    <div>
+      <Category selected={selected} setSelected={setSelected} />
+      <div className="filters">
+        <p>Filter by price</p>
+        <Pricefilter />
+      </div>
+      <ProductsDisplay posts={posts} />
+    </div>
+  );
 }
