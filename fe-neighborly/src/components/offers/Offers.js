@@ -1,16 +1,16 @@
 import Pricefilter from "../home/Pricefilter";
-import ProductsDisplay from "../Product/ProductsDisplay";
+import ProductTiles from "../Product/ProductTiles";
 import Category from "../category/Category";
 
 export default function Offers({ posts, setPosts, selected, setSelected }) {
   return (
     <div>
-      <Category selected={selected} setSelected={setSelected} />
       <div className="filters">
+        <Category selected={selected} setSelected={setSelected} />
         <p>Filter by price</p>
         <Pricefilter />
       </div>
-      <ProductsDisplay posts={posts} />
+      <ProductTiles posts={posts} />
     </div>
   );
 }

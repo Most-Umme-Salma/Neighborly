@@ -13,7 +13,8 @@ const ProductsDisplay = ({ posts }) => {
     <div className="wrapper">
       {posts?.map((product, _id) => {
         return (
-          <section key={_id} className="product-cards">
+          <section>
+            <div key={_id} className="product-cards">
             {<img className="image" src={product.img} />}
             <h3 className="title">{product.title}</h3>
             <h3 className="price">{product.price}</h3>
@@ -25,7 +26,9 @@ const ProductsDisplay = ({ posts }) => {
             >
               More{" "}
             </button>
+            </div>
           </section>
+          
         );
       })}
     </div>

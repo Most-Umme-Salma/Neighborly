@@ -21,7 +21,7 @@ const Product = () => {
     
     return (<div className='product'>{product &&
             <section>
-                    {<img className='product-img' src={procuct.img} />}
+                    {<img className='product-img' src={procuct.img} />} 
                     <h3 className='product-title'>{product.title}</h3>
                     {product.description.content.map((content, i) => {
                         if (content.nodeType === "paragraph") {

@@ -11,6 +11,7 @@ const postRouter = express.Router();
 
 postRouter.route("/").get(getPosts).post(createPost);
 postRouter.route("/:id").get(getPost).put(updatePost).delete(deletePost);
+postRouter.route("/offers").get(getPost).put(updatePost)
 
 
 // postRouter.route('/search').get(getFilteredPosts)
