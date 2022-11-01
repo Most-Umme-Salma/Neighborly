@@ -2,33 +2,28 @@ textarea {
   width: 100%;
 }
 
-h1 {
-  position: absolute;
-  top: 56px;
-  left: 132px;
-  font-family: Inter;
-  font-size: 32px;
-  line-height: 48px;
-  color: #171A1FFF;
-}
-
 .newoffer{
   display:flex;
-  justify-content: space-around;
-  margin: 32px;
+  justify-content: space-between;
+  max-width: 1024px;
+  margin: 32px auto;
+  gap: 12px;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 1024px) {
   .newoffer {
-    flex-direction: column;
+    margin: 32px;
+
   }
 }
 
-input, select, option {
-  width: 100%;
-  color: rgba(0,0,0,1);
-  padding: 16px;
+@media (max-width: 768px) {
+  .newoffer {
+    flex-direction: column;
+    margin: 32px;
+  }
 }
+
 .black{
   color:black;
 }
@@ -50,16 +45,13 @@ input, select, option {
   display: flex;
 }
 
-.title .description .category .condition .location .price .upload {
+.title-new-offer .description .category .condition .location .price-new-offer .upload {
   display: flex;
-  border: 2px; 
-  color: rgb(23, 26, 31);
 }
 
 .summary {
   display:flex;
   flex-direction: column;
-  justify-content: center;
   background: rgb(246, 246, 246);
   border-radius: 8px;
   padding: 16px;
@@ -89,4 +81,8 @@ input, select, option {
   background-color: aquamarine;
   margin: 0 8px;
   border-radius: 8px;
+}
+
+.w-100 {
+  width: 100%;
 }

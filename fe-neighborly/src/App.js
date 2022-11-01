@@ -13,7 +13,6 @@ import axios from "axios";
 import UserPage from "./components/User/UserPage";
 import Register from "./components/Register/Register";
 
-
 function App() {
   const [posts, setPosts] = useState([]);
   const [product, setProduct] = useState([]);

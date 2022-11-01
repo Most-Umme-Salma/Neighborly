@@ -1,30 +1,38 @@
 .nav {
-  background-color: #030322;
+  background-color: #01010f;
   color: white;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  padding: 1rem;
   position: fixed;
   top: 0;
   width: 100%;
 }
 
-.Logo {
-  width: 8.5rem;
-  padding-right: 2rem;
+@media (max-width: 578px) {
+  .nav {
+    position: sticky;
+  }
+}
+
+.logo {
+  width: 128px;
 }
 
 .nav-left {
   display: flex;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 16px;
   text-decoration: none;
+  align-items: center;
 }
+
 .nav-right {
   display: flex;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 16px;
+  align-items: center;
+  padding: 16px;
 }
 
 .nav-text {
@@ -32,13 +40,19 @@
   justify-content: center;
   align-items: center;
   text-decoration: none;
+  text-transform: uppercase;
+  padding: 16px;
 }
+
 .nav-text:hover {
-  background-color: #777;
+  border-bottom: 2px solid rgba(255,255,255,1);
+  color: rgba(255,255,255,1);
 }
-.nav-btn {
-  display: flex;
-  color: black;
-  text-decoration: none;
-  text-align: center;
+
+.w-64 {
+  width: 64px !important;
+}
+
+.c-white {
+  color: rgba(255,255,255,1) !important;
 }

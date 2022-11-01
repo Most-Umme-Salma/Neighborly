@@ -2,34 +2,30 @@ import { NavLink, Link } from "react-router-dom";
 import "./navbar.css";
 import { BsFillCartDashFill, BsFillPersonFill } from "react-icons/bs";
 import Logo from "./../../Img/logo.png";
-import Searchbar from "../searchbar/Searchbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 
 export default function Navbar() {
   return (
-    <nav>
-      <div className="nav">
+    <nav className="nav">
         <div className="nav-left">
           <div>
-            <NavLink to="/" className="nav-text">
-              <img src={Logo} alt="logo" className="Logo"></img>
+            <NavLink to="/">
+              <img src={Logo} alt="logo" className="logo"></img>
             </NavLink>
           </div>
           <NavLink to="/offer" className="nav-text">
-            offers
+            Offers
           </NavLink>
           <NavLink to="/newoffer" className="nav-text">
             New offer
           </NavLink>
         </div>
         <div className="nav-right">
-          <NavLink to="/searchbar" className="nav-text">
-            Searchbar
-          </NavLink>
-          <BsFillCartDashFill size={25} />
+          <BsFillCartDashFill size={24} />
           <NavDropdown
-            title={<BsFillPersonFill size={25} />}
+            title={<BsFillPersonFill size={24} className="c-white"/>}
             id="basic-nav-dropdown"
+            className="w-64 c-white"
           >
             <NavDropdown.Item>
               <NavLink to="/users/${id}" className="nav-btn">
@@ -41,7 +37,6 @@ export default function Navbar() {
             </NavDropdown.Item>
           </NavDropdown>
         </div>
-      </div>
     </nav>
   );
 }

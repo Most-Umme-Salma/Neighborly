@@ -9,7 +9,7 @@ export default function Footer() {
     <div className="footer">
       <div className="footer-container">
         <div className="footer-logo">
-          <img src={Logo} alt="logo" className="Logo"></img>
+          <img src={Logo} alt="logo" className="logo"></img>
           <h4>Subscribe to our newsletter</h4>
           <input
             className="footer-input"

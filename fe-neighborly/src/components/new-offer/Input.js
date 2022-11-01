@@ -4,7 +4,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 
-export default function Input({ handleChange, state, setState}){
+export default function Input({ handleChange, text, state, setState}){
 
     const {
         register,
@@ -24,29 +24,29 @@ export default function Input({ handleChange, state, setState}){
 
     return(
         <form onSubmit={handleSubmit(onSubmit)} className="submitForm">
-            <div className="title">
+            <div className="title-new-offer">
                 <h3>Title</h3> 
-                <input className="black" type="text" {...register("title", {onChange: handleChange})} />
+                <input className="p-8 w-100" type="text" {...register("title", {onChange: handleChange})} />
             </div>
             <div className="description">
                 <h3>Description</h3>
-                <textarea rows={4} {...register("description", {onChange: handleChange})}/>
+                <textarea rows={4} {...register("description", {onChange: handleChange})} className="p-8 w-100" />
             </div>
            
-            <div className="price">
+            <div className="price-new-offer">
                 <h3>Price</h3>
                 <div className="d-flex">
-                <select name="currency" {...register("currency", {onChange: handleChange})}>
+                <select name="currency" {...register("currency", {onChange: handleChange})} className="p-8 w-100" >
                 <option value="euro">Eur</option>
                 <option value="dodge">DodgeCoin</option>
                 <option value="bitcoin">Bitcoin</option>
                 </select>
-                <input type="number" {...register("price", {onChange: handleChange})}/>
+                <input type="number" {...register("price", {onChange: handleChange})} className="p-8 w-100" />
                 </div>
             </div>
             <div className="category">
                 <h3>Category</h3>
-                <select name="category" {...register("category", {onChange: handleChange})} >
+                <select name="category" {...register("category", {onChange: handleChange})} className="p-8 w-100">
                 <option value="electric">Electric</option>
                 <option value="home">Home</option>
                 <option value="service">Service</option>
@@ -54,20 +54,20 @@ export default function Input({ handleChange, state, setState}){
             </div>
             <div className="condition">
                 <h3>Condition</h3>
-                <select name="condition" {...register("condition", {onChange: handleChange})}>
+                <select name="condition" {...register("condition", {onChange: handleChange})} className="p-8 w-100" >
                 <option value="used">Used</option>
                 <option value="new">new</option>
                 </select>
             </div>
             <div className="location">
                 <h3>Location</h3>
-                <input type="number" maxLength="5" placeholder="Enter PLZ" {...register("lcoation", {onChange: handleChange})}/>
+                <input type="number" maxLength="5" placeholder="Enter PLZ" {...register("lcoation", {onChange: handleChange})} className="p-8 w-100" />
             </div>
             <div className="upload">
                 <h3>Upload picture</h3>
                 <input type="file" accept="image/*" />
             </div> 
-            <PrimaryButton onClick={handleSubmit(onSubmit)}>Post your listing</PrimaryButton>
+            <PrimaryButton onClick={handleSubmit(onSubmit)} text="Post your listing"/>
         </form> 
        
         

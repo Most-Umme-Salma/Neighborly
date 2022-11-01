@@ -1,5 +1,3 @@
-/* primaryButton in Blue */
-
 .primaryButton {
 	box-shadow: 0px 0px 0px 2px #9fb4f2;
 	background:linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
@@ -9,23 +7,24 @@
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
-	font-size:19px;
-	padding:12px 37px;
+	font-size: 1rem;
+	padding: 16px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #283966;
-}
-.primaryButton:hover {
+	text-transform: uppercase;
+   }
+   .primaryButton:hover {
 	background:linear-gradient(to bottom, #476e9e 5%, #7892c2 100%);
 	background-color:#476e9e;
-}
-.primaryButton:active {
+   }
+   .primaryButton:active {
 	position:relative;
 	top:1px;
-}
-
-/* secondary button in green */
-
-.secondaryButton {
+   }
+   
+   /* secondary button in green */
+   
+   .secondaryButton {
 	box-shadow: 0px 0px 0px 2px #3dc21b;
 	background:linear-gradient(to bottom, #44c767 5%, #5cbf2a 100%);
 	background-color:#44c767;
@@ -34,23 +33,24 @@
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
-	font-size:19px;
-	padding:12px 37px;
+	font-size: 1rem;
+	padding: 16px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #2f6627;
-}
-.secondaryButton:hover {
+	text-transform: uppercase;
+   }
+   .secondaryButton:hover {
 	background:linear-gradient(to bottom, #5cbf2a 5%, #44c767 100%);
 	background-color:#5cbf2a;
-}
-.secondaryButton:active {
+   }
+   .secondaryButton:active {
 	position:relative;
 	top:1px;
-}
-
-/* tertiary button transparent in pink */
-
-.tertiaryButton {
+   }
+   
+   /* tertiary button transparent in pink */
+   
+   .tertiaryButton {
 	box-shadow: 0px 0px 0px 2px #ffffff;
 	background-color:transparent;
 	border-radius:10px;
@@ -58,15 +58,25 @@
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
-	font-size:19px;
-	padding:12px 37px;
+	font-size: 1rem;
+	padding: 16px;
 	text-decoration:none;
-	/* text-shadow:0px 1px 0px #66295f; */
-}
-.tertiaryButton:hover {
+	text-transform: uppercase;
+   }
+   .tertiaryButton:hover {
 	background-color:transparent;
-}
-.tertiaryButton:active {
+   }
+   .tertiaryButton:active {
 	position:relative;
 	top:1px;
+   }
+   
+   
+   @media (max-width: 576px) {
+   
+	.primaryButton, .secondaryButton, .tertiaryButton {
+	 padding: 8px;
+	 
+	}
+	
 }
