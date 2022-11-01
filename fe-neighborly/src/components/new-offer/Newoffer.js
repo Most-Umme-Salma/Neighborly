@@ -1,3 +1,4 @@
+ //import {useDispatch} from "react-redux";
  import "./style/newOffer.css";
  import Input from "./Input";
  import Summary from "./Summary";
@@ -34,6 +35,6 @@ export default function Newoffer({}){
     return(
     <div className="newoffer">
          <Input handleSubmit={handleSubmit} handleChange={handleChange} state={state} setState={setState} />
-         <Summary state={state} setState={setState} handleChange={handleChange} /> {}
+         <Summary state={state} setState={setState} /> {}
     </div>)
 }
