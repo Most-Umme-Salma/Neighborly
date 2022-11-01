@@ -4,3 +4,43 @@
   text-align: center;
   padding-left: 5rem;
 }
+
+.home-wrapper {
+  max-width: 1024px;
+  margin: 32px auto;
+}
+
+@media (max-width: 1024px) {
+  .home-wrapper {
+    margin: 32px;
+  }
+}
+
+.card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 10px;
+  justify-content: center
+}
+
+.card {
+  width: calc(25% - 10px);
+  box-shadow: 3px 9px 19px 1px rgba(0,0,0,0.56);
+}
+
+@media (max-width: 1024px) {
+  .card {
+    width: calc(50% - 10px);
+  }
+}
+
+@media (max-width: 578px) {
+  .card {
+    width: 100%;
+  }
+}
+
+.d-flex {
+  display: flex;
+}
