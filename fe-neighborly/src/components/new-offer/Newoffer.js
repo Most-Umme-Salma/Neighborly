@@ -1,5 +1,4 @@
- //import {useDispatch} from "react-redux";
- import "./style/newOffer.css";
+import "./style/newOffer.css";
  import Input from "./Input";
  import Summary from "./Summary";
  import {useState} from "react";
@@ -23,6 +22,7 @@ export default function Newoffer({}){
         const copy = {...state};
             copy[name] = value;
             setState(copy);
+            console.log(copy)
     }
 
     const handleSubmit =(e)=>{
@@ -30,7 +30,7 @@ export default function Newoffer({}){
         e.preventDefault();
        
     }
-    
+   
     
     return(
     <div className="newoffer">
