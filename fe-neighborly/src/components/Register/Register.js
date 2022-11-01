@@ -24,7 +24,7 @@ export default function Register() {
     <div className="RegisterParentContainer">
         <div className="RegisterLeft">
         </div>
-      <section className="RegisterRight">
+        <section className="RegisterRight">
         <h2 className="signupHeading bold">Sign Up</h2>
         <form onSubmit={handleSubmit(onSubmit)}>
             <input 
