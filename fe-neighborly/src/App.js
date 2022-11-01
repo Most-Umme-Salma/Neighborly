@@ -23,18 +23,31 @@ function App() {
       .get(`http://localhost:3001/posts?category=${selected}`)
       .then((res) => {
         setPosts(res.data);
-        console.log(res.data);
+        
       })
       .catch((err) => {
         console.log(err);
       });
   }, [selected]);
 
+  useEffect(() => {
+    axios
+      .get("http://localhost:3001/posts")
+      .then(res => {
+        setProduct(res.data);
+        console.log(product)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+    }, []
+  )
+
   return (
     <div className="page-container">
       <div className="content-wrap">
         <Navbar />
-        <Herosection />
+        <Herosection product={product}/>
         <div>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -49,8 +62,8 @@ function App() {
                 />
               }
             />
-            <Route path="/newoffer" element={<Newoffer title={title} />} />
-            <Route path="/searchbar" element={<Searchbar />} />
+            <Route path="/newoffer" element={<Newoffer />} />
+            
             <Route path="/login" element={<Login />} />
             <Route path="/users/:id" element={<UserPage />} />
             <Route path="/signup" element={<Register />} />
