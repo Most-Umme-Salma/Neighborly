@@ -5,7 +5,7 @@ const postSchema = new Schema(
     title: { type: String, require: true, uniquie: true },
     description: { type: String, required: true },
     price: { type: Number, required: true },
-    categories: { type: Array },
+    category: { type: Array },
     condition: {type: Array},
     post_code: { type: Number },
     currency: {type: String},

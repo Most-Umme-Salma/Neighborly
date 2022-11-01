@@ -6,7 +6,7 @@ const createPost = async (req, res, next) => {
       body: { title,
         description,
         price,
-        categories,
+        category,
         condition,
         post_code,
         currency,
@@ -18,7 +18,7 @@ const createPost = async (req, res, next) => {
       title,
       description,
       price,
-      categories,
+      category,
       condition,
       post_code,
       currency,
@@ -51,7 +51,7 @@ const getPosts = async (req, res, next) => {
       posts = await Post.find().sort({ createdAt: -1 }).limit(1);
     } else if (pCategory) {
       posts = await Post.find({
-        categories: {
+        category: {
           $in: [pCategory],
         },
       });
