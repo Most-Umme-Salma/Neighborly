@@ -1,4 +1,4 @@
-import TertiaryButton from "../Buttons/TertiaryButton";
+import PrimaryButton from "../Buttons/PrimaryButton";
 
 export default function Input({handleSubmit, handleChange, state, setState}){
 
@@ -6,7 +6,7 @@ export default function Input({handleSubmit, handleChange, state, setState}){
         <form onSubmit={handleSubmit} className="submitForm">
             <div className="title">
                 <h3>Title</h3> 
-                <input className="black" type="text" onChange={handleChange} name="title"  />
+                <input className="black" type="text" onChange={handleChange} name="title" required={true} />
             </div>
             <div className="description">
                 <h3>Description</h3>
@@ -21,12 +21,12 @@ export default function Input({handleSubmit, handleChange, state, setState}){
                 <option value="dodge">DodgeCoin</option>
                 <option value="bitcoin">Bitcoin</option>
                 </select>
-                <input type="number" onChange={handleChange} name="price"  />
+                <input type="number" onChange={handleChange} name="price" required={true} />
                 </div>
             </div>
             <div className="category">
                 <h3>Category</h3>
-                <select name="category"  onChange={handleChange}>
+                <select name="category"  onChange={handleChange} required={true}>
                 <option value="electric">Electric</option>
                 <option value="home">Home</option>
                 <option value="service">Service</option>
@@ -34,20 +34,20 @@ export default function Input({handleSubmit, handleChange, state, setState}){
             </div>
             <div className="condition">
                 <h3>Condition</h3>
-                <select name="condition"  onChange={handleChange}>
+                <select name="condition"  onChange={handleChange} required={true}>
                 <option value="used">Used</option>
                 <option value="new">new</option>
                 </select>
             </div>
             <div className="location">
                 <h3>Location</h3>
-                <input type="number" maxLength="5" placeholder="Enter PLZ" name="location" onChange={handleChange} />
+                <input type="number" maxLength="5" placeholder="Enter PLZ" name="location" onChange={handleChange} required={true}/>
             </div>
             <div className="upload">
                 <h3>Upload picture</h3>
                 <input type="file" accept="image/*" />
             </div>
-            <TertiaryButton /> 
+            <PrimaryButton onClick={handleSubmit}>Post your listing</PrimaryButton>
         </form> 
        
         
