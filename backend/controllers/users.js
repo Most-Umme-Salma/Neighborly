@@ -7,12 +7,21 @@ const login = async (req, res, next) => {
   try {
     const email = req.body.email;
     const password = req.body.password;
-    
-    const useremail = await User.findOne({ email: email });
-    console.log(useremail, password);
-    
-    if (useremail.password === password) {
-      res.status(201).json(useremail);
+
+    const useremail = await User.findOne({ email: email }).select("+password");
+    const match = await bcrypt.compare(password, useremail.password);
+
+    const payload = {
+      email: useremail.email,
+      name: useremail.name,
+      id: useremail._id,
+    };
+    const token = jwt.sign(payload, process.env.JWT_SECRET, {
+      expiresIn: "6000m",
+    });
+
+    if (match) {
+      res.status(201).json(payload);
     } else {
       res.send("password are not matching");
     }
@@ -26,7 +35,7 @@ const signup = async (req, res, next) => {
     const {
       body: { email, password, name, birth_date },
     } = req;
-
+    	console.log({email, password, birth_date, name})
     //chech if user exists
     const user = await User.findOne({ email });
     //if (user) throw ErrorResponse("User already exists", 420)  ---- must create error handling middleware

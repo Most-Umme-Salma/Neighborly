@@ -11,6 +11,8 @@ import Herosection from "./components/Hero/Herosection";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import UserPage from "./components/User/UserPage";
+import Register from "./components/Register/Register";
+
 
 function App() {
   const [posts, setPosts] = useState([]);
@@ -52,6 +54,7 @@ function App() {
             <Route path="/searchbar" element={<Searchbar />} />
             <Route path="/login" element={<Login />} />
             <Route path="/users/:id" element={<UserPage />} />
+            <Route path="/signup" element={<Register />} />
           </Routes>
         </div>
       </div>

@@ -70,7 +70,6 @@ const Login = () => {
                     <h1>Sign In</h1>
                     <form onSubmit={handleSubmit}>
                         <div id='usernameField'>
-                            <label htmlFor="username">Username:</label>
                             <input
                                 type="text"
                                 id="username"
@@ -83,7 +82,6 @@ const Login = () => {
                             />
                         </div>
                         <div id='passwordField'>
-                            <label htmlFor="password">Password:</label>
                             <input
                                 type="password"
                                 id="password"
@@ -98,7 +96,7 @@ const Login = () => {
                                 <label htmlFor="remember">Remember</label>
                             <a href='/'>Forgot password</a>
                         </div>
-                        <div id='Button'>
+                        <div id='ButtonLogin'>
                         <PrimaryButton text="Sign in"/>
                         </div>
                     </form>

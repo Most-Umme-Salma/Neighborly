@@ -1,0 +1,97 @@
+.RegisterParentContainer {
+    display: flex;
+    max-width: 100%;
+    flex-wrap: nowrap;
+    padding: 4rem;
+    background-color: #5679a957;
+}
+
+.signupHeading {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.RegisterRight {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 40rem;
+    align-items: center;
+    color: black;
+    padding: 1rem auto;
+    justify-content: center;
+    background-color: white;
+    border-radius: 0rem 1rem 1rem 0rem;
+}
+
+.RegisterLeft {
+    background-image: url("https://images.pexels.com/photos/3826666/pexels-photo-3826666.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    width: 40%;
+    height: 40rem;
+    border-radius: 1rem 0rem 0rem 1rem;
+}
+
+#usernameRegister {
+    display: flex;
+    margin: 0 auto;
+    background-color: #c4c4c486;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+#passwordRegister {
+    display: flex;
+    margin: 0 auto;
+    background-color: #c4c4c486;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+#emailRegister {
+    display: flex;
+    margin: 0 auto;
+    background-color: #c4c4c486;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+input:focus {
+    border: 2px solid white;
+    color: white;
+}
+
+#ButtonRegister {
+    display: flex;
+    margin: 0 auto;
+	box-shadow: 0px 0px 0px 2px #9fb4f2;
+	background:linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
+	background-color:#7892c2;
+	border-radius:10px;
+	border:1px solid #4e6096;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:19px;
+	padding:12px 37px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #283966;
+    width: 60%;
+    text-align: center;
+}
+#ButtonRegister:hover {
+	background:linear-gradient(to bottom, #476e9e 5%, #7892c2 100%);
+	background-color:#476e9e;
+}
+#ButtonRegister:active {
+	position:relative;
+	top:1px;
+}
+
+.bold {
+    font-weight: bolder;
+}
