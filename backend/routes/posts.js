@@ -15,6 +15,8 @@ postRouter.route("/").get(getPosts).post(createPost);
 postRouter.route("/:id").get(getPost).put(updatePost).delete(deletePost);
 // get posts for searchbar
 postRouter.route("/search").get(getPost)
+// get posts for oofers
+postRouter.route("/offers").get(getPost).put(updatePost)
 
 /*
 router.get("/posts", async (req, res) => {
