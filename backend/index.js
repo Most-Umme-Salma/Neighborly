@@ -10,8 +10,9 @@ const postRoutes = require("./routes/posts");
 const { userRouter } = require("./routes/users");
 const bodyParser = require("body-parser");
 const fileUpload = require("express-fileupload");
+const path = require("path");
 
-
+console.log(__dirname);
 
 const app = express();
 
@@ -28,13 +29,6 @@ app.use(cors({
     credentials:true
 }));
 app.use(bodyParser.json());
-
-app.get("/", (req,res)=>{
-    
-});
-
-
-
 
 app.get("/cors", (req,res)=>{
     res.set('Access-Controll-Allow-Origin', '*')
@@ -70,9 +64,13 @@ app.use("/posts", postRouter);
 app.use("/auth", authRouter);
 app.use("/users", userRouter);
 app.use("/search",postRouter ) ;
+app.use(express.static(path.resolve(__dirname, "../fe-neighborly", "build")));
+app.get("/*", (req, res) => {
+    res.sendFile(path.join(__dirname, "../fe-neighborly", "build", "index.html"));
+   });
+   
 
 app.listen(port,()=>{console.log(`Server is running on http://localhost:${port}`)});
-
 
  
 

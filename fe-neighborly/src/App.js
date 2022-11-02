@@ -9,7 +9,7 @@ import Login from "./components/login/Login";
 import { Route, Routes } from "react-router-dom";
 import Herosection from "./components/Hero/Herosection";
 import { useEffect, useState } from "react";
-import axios from "axios";
+import axios from "./axiosClient";
 import UserPage from "./components/User/UserPage";
 import Register from "./components/Register/Register";
 
@@ -20,7 +20,7 @@ function App() {
   const [title, setTitle] = useState("");
   useEffect(() => {
     axios
-      .get(`http://localhost:3001/posts?category=${selected}`)
+      .get(`${process.env.REACT_APP_BACKEND_URL}/posts?category=${selected}`)
       .then((res) => {
         setPosts(res.data);
         
@@ -32,7 +32,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/posts")
+      .get(`${process.env.REACT_APP_BACKEND_URL}/posts`)
       .then(res => {
         setProduct(res.data);
         console.log(product)

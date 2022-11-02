@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect } from 'react';
-import axios from "axios";
+import axios from "../../axiosClient";
 import "./LoginLayout.css"
 import PrimaryButton from "../Buttons/PrimaryButton"
 
@@ -25,7 +25,7 @@ const Login = () => {
         e.preventDefault();
         
             try {
-                const response = await axios.post("http://localhost:3001/auth/login",
+                const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/auth/login`,
                     { email: user, password: pwd },
                     {
                         headers: { 'Content-Type': 'application/json' },

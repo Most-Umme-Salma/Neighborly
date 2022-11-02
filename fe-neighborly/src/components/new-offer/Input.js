@@ -1,6 +1,6 @@
 import PrimaryButton from "../Buttons/PrimaryButton";
 import { useForm } from "react-hook-form";
-import axios from "axios";
+import axios from "../../axiosClient";
 import { useNavigate } from "react-router-dom";
 
 
@@ -13,7 +13,7 @@ export default function Input({ handleChange, file, setUploadedFile, handleFile}
       } = useForm();
 
       const onSubmit =  (data) => {
-        axios.post("http://localhost:3001/posts", data).then((response) => {
+        axios.post(`${process.env.REACT_APP_BACKEND_URL}/posts`, data).then((response) => {
             console.log(response.data)
             // navigate("/")
         }).catch((error) => {
@@ -23,7 +23,7 @@ export default function Input({ handleChange, file, setUploadedFile, handleFile}
         const formData = new FormData();
         formData.append('file', file);
         try {
-            const res = axios.post('http://localhost:3001/upload', formData, {
+            const res = axios.post(`${process.env.REACT_APP_BACKEND_URL}/upload`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }

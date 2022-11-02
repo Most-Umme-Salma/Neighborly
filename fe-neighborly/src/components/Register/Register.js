@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import axios from "axios";
+import axios from "../../axiosClient";
 import { useNavigate } from "react-router-dom";
 import "./RegisterStyling.css"
 
@@ -12,7 +12,7 @@ export default function Register() {
   } = useForm();
 
   const onSubmit = (data) => {
-    axios.post("http://localhost:3001/auth/signup", data).then((response) => {
+    axios.post(`${process.env.REACT_APP_BACKEND_URL}/auth/signup`, data).then((response) => {
         console.log(response.data)
         navigate("/")
     }).catch((error) => {
