@@ -67,7 +67,7 @@ export default function Input({ handleChange, file, setUploadedFile, handleFile}
             <div className="category">
                 <h3>Category</h3>
                 <select name="category" {...register("category", {onChange: handleChange})} className="p-8 w-100">
-                <option value="electric">Electric</option>
+                <option value="hobby">Hobby</option>
                 <option value="home">Home</option>
                 <option value="service">Service</option>
                 </select>
