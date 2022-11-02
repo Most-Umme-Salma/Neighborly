@@ -13,19 +13,21 @@ const ProductsDisplay = ({ posts }) => {
     <div className="wrapper">
       {posts?.map((product, _id) => {
         return (
-          <section key={_id} className="product-cards">
-            {<img className="image" src={product.img} alt={product.title}/>}
-            <h3 className="title">{product.title}</h3>
-            <h3 className="price">{product.price}</h3>
-            <button
-              className="more-button"
-              onClick={() => {
-                navigate(`/product/${product._id}`);
-              }}
-            >
-              More{" "}
-            </button>
-          </section>
+          <section>
+          <div key={_id} className="product-cards">
+          {<img className="image" src={product.img} alt={product.title}/>}
+          <h3 className="title">{product.title}</h3>
+          <h3 className="price">{product.price}</h3>
+          <button
+            className="more-button"
+            onClick={() => {
+              navigate(`/product/${product._id}`);
+            }}
+          >
+            More{" "}
+          </button>
+          </div>
+        </section>
         );
       })}
     </div>
