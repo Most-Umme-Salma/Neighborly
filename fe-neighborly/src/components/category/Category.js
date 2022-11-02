@@ -6,55 +6,42 @@ export default function Category({ selected, setSelected }) {
   const [isActive, setIsActive] = useState(false);
   return (
     <div className="dropdown">
-      <div className="dropdown-dtn " onClick={(e) => setIsActive(!isActive)}>
-        <div>{selected ? selected : "categories"}</div>
+      <div className="dropdown-btn " onClick={(e) => setIsActive(!isActive)}>
+        <div>
+          {selected === '' ? 'All' : selected}
+        </div>
         <div>
           <BsCaretDownFill size={15} />
         </div>
       </div>
-
       {isActive && (
         <div className="dropdown-content">
-          <div className="dropdown-items">
-            <div
-              onClick={(e) => {
-                setSelected(e.target.textContent);
-                setIsActive(false);
-              }}
-            >
+          <div className="dropdown-items" onClick={(e) => {
+                setSelected('');
+                console.log(selected)
+                setIsActive(false);}}>
               all
-            </div>
           </div>
 
-          <div className="dropdown-items">
-            <div
-              onClick={(e) => {
+          <div className="dropdown-items" onClick={(e) => {
                 setSelected(e.target.textContent);
                 setIsActive(false);
-              }}
-            >
+              }}>
               hobby
-            </div>
           </div>
-          <div className="dropdown-items">
-            <div
+          <div className="dropdown-items"
               onClick={(e) => {
                 setSelected(e.target.textContent);
                 setIsActive(false);
               }}
             >
-              household
-            </div>
+              home
           </div>
-          <div className="dropdown-items">
-            <div
-              onClick={(e) => {
+          <div className="dropdown-items" onClick={(e) => {
                 setSelected(e.target.textContent);
                 setIsActive(false);
-              }}
-            >
-              offer
-            </div>
+              }}>
+              service
           </div>
         </div>
       )}
