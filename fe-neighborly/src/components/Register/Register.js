@@ -26,15 +26,17 @@ export default function Register() {
         </div>
         <section className="RegisterRight">
         <h2 className="signupHeading bold">Sign Up</h2>
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form onSubmit={handleSubmit(onSubmit)} className="form-wrapper">
             <input 
-                id="usernameRegister"
-                placeholder="Name" 
-                type="text" 
-                {...register("name", { required: true })} 
+              className="signup-input"
+              id="usernameRegister"
+              placeholder="Name" 
+              type="text" 
+              {...register("name", { required: true })} 
             />
             {errors.name && <span>This field is required</span>}
             <input 
+                className="signup-input"
                 id="emailRegister"
                 placeholder="Email" 
                 type="email" 
@@ -43,6 +45,7 @@ export default function Register() {
             {errors.email && <span>This field is required</span>}
 
             <input 
+                className="signup-input"
                 id="passwordRegister"
                 placeholder="Password" 
                 type="password" 
@@ -50,7 +53,7 @@ export default function Register() {
                 />
             {errors.password?.type === "required" && <span>This field is required</span>}
             {errors.password?.type === "minLength" && <span>Password must be at least 8 caracters long</span>}
-            <input id="ButtonRegister" type="submit" />
+            <input id="ButtonRegister" type="submit" className="max-width"/>
         </form>
       </section>
     </div>
