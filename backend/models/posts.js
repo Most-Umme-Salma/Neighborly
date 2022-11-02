@@ -9,7 +9,7 @@ const postSchema = new Schema(
     condition: {type: Array},
     post_code: { type: Number },
     currency: {type: String},
-    img: { type: String },
+    img: { type: Object },
     created_at: { type: Date },
     user_id: {type: String}
    

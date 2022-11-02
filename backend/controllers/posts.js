@@ -86,10 +86,19 @@ const deletePost = async (req, res, next) => {
   }
 };
 
+const getFilteredPosts = async () => {
+  try {
+    console.log("Filter Test successful :D")
+  } catch(err) {
+    res.json({message:error.message});
+  }
+};
+
 module.exports = {
   createPost,
   getPost,
   getPosts,
   updatePost,
   deletePost,
+  getFilteredPosts,
 };

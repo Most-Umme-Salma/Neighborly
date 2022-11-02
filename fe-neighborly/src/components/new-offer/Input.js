@@ -4,7 +4,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 
-export default function Input({ handleChange, text, state, setState}){
+export default function Input({ handleChange, file, setUploadedFile, handleFile}){
 
     const {
         register,
@@ -12,15 +12,35 @@ export default function Input({ handleChange, text, state, setState}){
         formState: { errors },
       } = useForm();
 
-      const onSubmit = (data) => {
+      const onSubmit =  (data) => {
         axios.post("http://localhost:3001/posts", data).then((response) => {
             console.log(response.data)
             // navigate("/")
         }).catch((error) => {
             console.log(error)
         })
+
+        const formData = new FormData();
+        formData.append('file', file);
+        try {
+            const res = axios.post('http://localhost:3001/upload', formData, {
+                headers: {
+                    'Content-Type': 'multipart/form-data'
+                }
+            });
+
+            const {fileName, filePath } = res.data;
+
+            setUploadedFile({fileName, filePath})
+        } catch(err){
+            if (err.response.status === 500) {
+                console.log('you got a 500')
+            }
+            if (err.response.status === 400) {
+                console.log('you got a 400')
+            }
+        }
       };
-    
 
     return(
         <form onSubmit={handleSubmit(onSubmit)} className="submitForm">
@@ -64,8 +84,8 @@ export default function Input({ handleChange, text, state, setState}){
                 <input type="number" maxLength="5" placeholder="Enter PLZ" {...register("lcoation", {onChange: handleChange})} className="p-8 w-100" />
             </div>
             <div className="upload">
-                <h3>Upload picture</h3>
-                <input type="file" accept="image/*" />
+                <h3>Upload Image</h3>
+                <input type="file" accept="image/*" {...register("img", {onChange: handleFile})} className="p-8 w-100"/>
             </div> 
             <PrimaryButton onClick={handleSubmit(onSubmit)} text="Post your listing"/>
         </form> 
