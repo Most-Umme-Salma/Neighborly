@@ -5,15 +5,16 @@ const {
   getPosts,
   updatePost,
   deletePost,
+  getFilteredPosts,
 } = require("../controllers/posts");
 
 const postRouter = express.Router();
-
+// get (& create) all posts 
 postRouter.route("/").get(getPosts).post(createPost);
+//manipulate posts
 postRouter.route("/:id").get(getPost).put(updatePost).delete(deletePost);
-
-
-// postRouter.route('/search').get(getFilteredPosts)
+// get posts for searchbar
+postRouter.route("/search").get(getPost)
 
 /*
 router.get("/posts", async (req, res) => {
@@ -73,13 +74,7 @@ router.get("/posts", async (req, res) => {
 });
 
 
-getFilteredPosts = async () => {
-    try {
 
-    } catch(err) {
-
-    }
-}
 
 1. When you click on a filter button (on front end) you can send another axios/fetch request and get only
 the posts with the category selected
