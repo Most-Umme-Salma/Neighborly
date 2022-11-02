@@ -1,0 +1,7 @@
+.offers-container {
+    display: flex;
+}
+
+.filters {
+    width: 30%;
+}
