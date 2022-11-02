@@ -46,8 +46,8 @@ function App() {
   return (
     <div className="page-container">
       <div className="content-wrap">
-        <Navbar />
-        <Herosection product={product}/>
+        {window.location.pathname !== '/login' && window.location.pathname !== '/signup' && <Navbar />}
+        {window.location.pathname !== '/login' && window.location.pathname !== '/signup' && <Herosection product={product}/>}
         <div>
           <Routes>
             <Route path="/" element={<Home product={product} />} />
@@ -70,7 +70,7 @@ function App() {
           </Routes>
         </div>
       </div>
-      <Footer />
+      {window.location.pathname !== '/login' && window.location.pathname !== '/signup' && <Footer />}
     </div>
   );
 }

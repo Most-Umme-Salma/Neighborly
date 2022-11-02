@@ -55,20 +55,12 @@ const Login = () => {
 
     return (
         <>
-            {success ? (
-                <section>
-                    <h1>You are logged in!</h1>
-                    <br />
-                    <p>
-                        <a href="#">Home</a>
-                    </p>
-                </section>
-            ) : (
+            {success ? window.location.replace("/") : (
                 <div className='LoginPageParentContainer'>
-                <section className='LoginPageLeft'>
+                <section className='LoginPageLeft' >
                     <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
                     <h1>Sign In</h1>
-                    <form onSubmit={handleSubmit}>
+                    <form onSubmit={handleSubmit} className="form-wrapper">
                         <div id='usernameField'>
                             <input
                                 type="text"
@@ -79,6 +71,7 @@ const Login = () => {
                                 onChange={(e) => setUser(e.target.value)}
                                 value={user}
                                 required
+                                className='login-input'
                             />
                         </div>
                         <div id='passwordField'>
@@ -89,6 +82,7 @@ const Login = () => {
                                 onChange={(e) => setPwd(e.target.value)}
                                 value={pwd}
                                 required
+                                className='login-input'
                             />
                         </div>
                         <div id='rememberBox'>
@@ -97,15 +91,14 @@ const Login = () => {
                             <a href='/'>Forgot password</a>
                         </div>
                         <div id='ButtonLogin'>
-                        <PrimaryButton text="Sign in"/>
+                            <PrimaryButton text="Sign in" className="w-100"/>
                         </div>
                     </form>
 
                     <p id="signupField">
                         Need an Account?<br />
                         <span className="line">
-                            {/*router link*/}
-                            <a href="#">Sign Up</a>
+                            <a href="/signup">Sign Up</a>
                         </span>
                     </p>
                 </section>

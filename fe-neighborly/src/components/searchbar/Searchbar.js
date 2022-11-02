@@ -2,21 +2,22 @@ import "./searchbar.css"
 import PrimaryButton from "../Buttons/PrimaryButton"
 import {useState, useEffect} from "react";
 import SecondaryButton from "../Buttons/SecondaryButton";
+import List from "./List";
 
 function Searchbar({product}){    
 
     const [search, setSearch] = useState(" ")
 
-    product.map((prod)=>{console.log(prod)})
+    
     const handleInput=(e)=>{
         //setSearch(e.taget.value.toLowerCase());
         setSearch(e.target.value);
     }
     const handleSubmit =(e) =>{
         e.preventDefault();
-       // product?.map((prod)=>{console.log(prod)})
-
+        window.location.replace(`/offer`)
     }
+
     return (
     <form onSubmit={handleSubmit} className="searchbar-container">
         <input 
