@@ -6,18 +6,21 @@ import Newoffer from "./components/new-offer/Newoffer";
 import Offer from "./components/offers/Offers";
 import Searchbar from "./components/searchbar/Searchbar";
 import Login from "./components/login/Login";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useParams } from "react-router-dom";
 import Herosection from "./components/Hero/Herosection";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import UserPage from "./components/User/UserPage";
 import Register from "./components/Register/Register";
+//import {useParams} from "react";
 
 function App() {
   const [posts, setPosts] = useState([]);
   const [product, setProduct] = useState([]);
   const [selected, setSelected] = useState("");
   const [title, setTitle] = useState("");
+  const [search, setSearch] = useState("")
+  // const params = useParams(); 
   useEffect(() => {
     axios
       .get(`http://localhost:3001/posts?category=${selected}`)
@@ -35,7 +38,6 @@ function App() {
       .get("http://localhost:3001/posts")
       .then(res => {
         setProduct(res.data);
-        console.log(product)
       })
       .catch((err) => {
         console.log(err)
@@ -47,7 +49,7 @@ function App() {
     <div className="page-container">
       <div className="content-wrap">
         {window.location.pathname !== '/login' && window.location.pathname !== '/signup' && <Navbar />}
-        {window.location.pathname !== '/login' && window.location.pathname !== '/signup' && <Herosection product={product}/>}
+        {window.location.pathname !== '/login' && window.location.pathname !== '/signup' && <Herosection product={product} search={search} setSearch={setSearch}/>}
         <div>
           <Routes>
             <Route path="/" element={<Home product={product} />} />

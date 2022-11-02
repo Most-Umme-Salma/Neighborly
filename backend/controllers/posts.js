@@ -45,8 +45,13 @@ const getPost = async (req, res, next) => {
 const getPosts = async (req, res, next) => {
   const pNew = req.query.new;
   const pCategory = req.query.category;
+  
   try {
+    // require params. check if any posts include the searched title/desc etc
+   
+
     let posts;
+    // sort posts
     if (pNew) {
       posts = await Post.find().sort({ createdAt: -1 }).limit(1);
     } else if (pCategory) {
@@ -54,10 +59,11 @@ const getPosts = async (req, res, next) => {
         category: {
           $in: [pCategory],
         },
-      });
+      }); 
     } else {
       posts = await Post.find();
     }
+    
     /*const posts = Post.find({});*/
     res.json(posts);
   } catch (error) {
@@ -85,14 +91,17 @@ const deletePost = async (req, res, next) => {
     res.json({ message: error.message });
   }
 };
-
-const getFilteredPosts = async () => {
+// 
+const getFilteredPosts = async (req, res, next) => {
   try {
+    res.send("anything")
     console.log("Filter Test successful :D")
   } catch(err) {
     res.json({message:error.message});
   }
 };
+
+
 
 module.exports = {
   createPost,

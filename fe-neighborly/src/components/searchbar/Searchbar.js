@@ -4,9 +4,9 @@ import {useState, useEffect} from "react";
 import SecondaryButton from "../Buttons/SecondaryButton";
 import List from "./List";
 
-function Searchbar({product}){    
+function Searchbar({product, search, setSearch}){    
 
-    const [search, setSearch] = useState(" ")
+    
 
     
     const handleInput=(e)=>{
