@@ -24,7 +24,7 @@ const ProductTiles = ({ posts }) => {
                     >
                     More{" "}
                     </button>
-                    <h3 className="tile-price">{product.price}</h3>
+                    <h3 className="tile-price">{product.price} €</h3>
                 </div>
             </div>
           </section>
