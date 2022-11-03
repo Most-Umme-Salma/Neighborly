@@ -11,17 +11,19 @@
   display: flex;
   justify-content: space-between;
   text-transform: uppercase;
+  width: 80%;
 }
 .dropdown-content {
   position: absolute;
   z-index: 2;
   top: 110%;
+  left: 10%;
   padding: 1rem;
   background-color: white;
   box-shadow: 0.5px 0.5px 2px 1px rgba(0, 0, 0, 06);
   font-weight: 500;
   color: #333;
-  width: 100%;
+  width: 80%;
 }
 .dropdown-items {
   padding: 1rem;

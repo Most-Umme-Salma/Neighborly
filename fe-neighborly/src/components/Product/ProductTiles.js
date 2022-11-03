@@ -6,9 +6,9 @@ const ProductTiles = ({ posts }) => {
 
   return (
     <div className="tiles-wrapper">
-      {posts?.map((product, _id) => {
+      {posts?.map((product, id) => {
         return (
-          <section key={_id} className="product-tiles">
+          <section key={id} className="product-tiles">
             <div className="tile-image">
                 <img src="https://th.bing.com/th/id/OIP.nwTnY29OdJbWgueofEefRQHaHa?pid=ImgDet&rs=1" className="tite-image__src" alt={product.title}/>
             </div>
@@ -19,7 +19,7 @@ const ProductTiles = ({ posts }) => {
                     <button
                     className="tile-more-button"
                     onClick={() => {
-                        navigate(`/product/${product._id}`);
+                        navigate(`/product/${product.id}`);
                     }}
                     >
                     More{" "}

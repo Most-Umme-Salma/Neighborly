@@ -2,6 +2,13 @@
     display: flex;
 }
 
-.filters {
-    width: 30%;
+.text-pricefilter {
+    margin-top: 30px;
+}
+
+.price-range {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 250px;
 }
