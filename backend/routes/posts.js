@@ -9,12 +9,16 @@ const {
 } = require("../controllers/posts");
 
 const postRouter = express.Router();
+
 // get (& create) all posts 
 postRouter.route("/").get(getPosts).post(createPost);
+
+// get posts for searchbar
+postRouter.route("/search/").get(getFilteredPosts)
+
 //manipulate posts
 postRouter.route("/:id").get(getPost).put(updatePost).delete(deletePost);
-// get posts for searchbar
-postRouter.route("/search").get(getPost)
+
 // get posts for oofers
 postRouter.route("/offers").get(getPost).put(updatePost)
 

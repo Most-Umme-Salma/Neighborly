@@ -46,20 +46,30 @@ app.post("/upload", (req, res) => {
       return res.status(500).send(err);
     }
 
-    res.json({
-      fileName: file.name,
-      filePath: `../fe-neighborly/public/uploads/${file.name}`,
-    });
-  });
-});
 
+    const file = req.files.file;
+    console.log(file)
+  
+    
+    file.mv(`../fe-neighborly/public/uploads/${file.name}`, err => {
+        if(err) {
+            console.error(err);
+            return res.status(500).send(err);
+        }
+
+        res.json({ fileName: file.name, filePath: `../fe-neighborly/public/uploads/${file.name}`})
+    })
+})
+ 
 app.use(express.json());
 
 //routers
 app.use("/posts", postRouter);
 app.use("/auth", authRouter);
 app.use("/users", userRouter);
+
 app.use("/search", postRouter);
+
 
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
