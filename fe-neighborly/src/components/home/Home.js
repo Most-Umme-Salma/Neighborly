@@ -9,7 +9,7 @@ export default function Home({product}) {
   return (
     <section className="home-wrapper">
       <div className="d-flex flex-col">
-        <h1>Services</h1>
+        <h1 className="home-headings">Services</h1>
       
         <div className="card-wrapper">
           {console.log(product)}
@@ -24,7 +24,7 @@ export default function Home({product}) {
       </div>
       
       <div className="d-flex flex-col">
-        <h1>Hobby</h1>
+        <h1 className="home-headings">Hobby</h1>
       {/*map and check which products have category hobby & render card items correspondingly */}
         <div className="card-wrapper">
           { product.map((product, id) => {
@@ -37,7 +37,7 @@ export default function Home({product}) {
       </div>
 
       <div className="d-flex flex-col">
-        <h1>Home</h1>
+        <h1 className="home-headings">Home</h1>
       {/*map and check which products have category home & render card items correspondingly */}
         <div className="card-wrapper">
           { product.map((product, id) => {
