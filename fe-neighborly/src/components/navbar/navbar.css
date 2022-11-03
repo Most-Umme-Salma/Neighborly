@@ -46,8 +46,8 @@
 }
 
 .nav-text:hover {
-  border-bottom: 2px solid rgba(255,255,255,1);
-  color: rgba(255,255,255,1);
+  border-bottom: 2px solid rgba(255, 255, 255, 1);
+  color: rgba(255, 255, 255, 1);
 }
 
 .w-64 {
@@ -55,5 +55,9 @@
 }
 
 .c-white {
-  color: rgba(255,255,255,1) !important;
+  color: rgba(255, 255, 255, 1) !important;
+}
+.nav-btn {
+  text-decoration: none;
+  color: black;
 }
