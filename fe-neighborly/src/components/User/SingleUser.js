@@ -1,6 +1,6 @@
 import ProductsDisplay from "../Product/ProductsDisplay";
 import { useEffect, useState } from "react";
-import axios from "axios";
+import axios from "../../axiosClient";
 import { useParams } from "react-router-dom";
 import "./SingleUser.css";
 
@@ -10,7 +10,7 @@ function SingleUser() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3001/users/${id}`)
+      .get(`/users/${id}`)
       .then((res) => {
         setUser(res.data);
         console.log(res.data);

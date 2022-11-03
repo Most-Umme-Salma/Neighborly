@@ -9,7 +9,7 @@ import Login from "./components/login/Login";
 import { Route, Routes, useParams } from "react-router-dom";
 import Herosection from "./components/Hero/Herosection";
 import { useEffect, useState } from "react";
-import axios from "axios";
+import axios from "./axiosClient";
 import UserPage from "./components/User/UserPage";
 import Register from "./components/Register/Register";
 //import {useParams} from "react";
@@ -23,7 +23,7 @@ function App() {
   // const params = useParams(); 
   useEffect(() => {
     axios
-      .get(`http://localhost:3001/posts?category=${selected}`)
+      .get(`/posts?category=${selected}`)
       .then((res) => {
         setPosts(res.data);
         
@@ -35,7 +35,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/posts")
+      .get("/posts")
       .then(res => {
         setProduct(res.data);
       })
