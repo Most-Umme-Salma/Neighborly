@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import axios from 'axios';
+import axios from "../../axiosClient";
 import './SingleProduct.css';
 import {useParams} from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
@@ -12,7 +12,7 @@ const Product = () => {
 
     useEffect(() => {
 
-      axios.get(`http://localhost:3001/posts/${_id}`)
+      axios.get(`/posts/${_id}`)
         .then((res) => {
           setProduct(res.data)
         })

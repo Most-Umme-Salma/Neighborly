@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import axios from "axios";
+import axios from "../../axiosClient";
 import { useNavigate } from "react-router-dom";
 import "./RegisterStyling.css";
 import { useNavigate } from "react-router-dom";
@@ -14,15 +14,14 @@ export default function Register() {
   } = useForm();
 
   const onSubmit = (data) => {
-    axios
-      .post("http://localhost:3001/auth/signup", data)
-      .then((response) => {
-        console.log(response.data);
-        navigate("/");
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+
+    axios.post("/auth/signup", data).then((response) => {
+        console.log(response.data)
+        navigate("/")
+    }).catch((error) => {
+        console.log(error)
+    })
+
   };
 
   return (
