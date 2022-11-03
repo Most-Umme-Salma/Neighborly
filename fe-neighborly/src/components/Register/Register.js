@@ -2,7 +2,6 @@ import { useForm } from "react-hook-form";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "./RegisterStyling.css";
-import { useNavigate } from "react-router-dom";
 
 export default function Register() {
   const navigate = useNavigate();
